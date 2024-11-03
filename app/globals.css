@@ -1,0 +1,384 @@
+@import url("https://api.fontshare.com/v2/css?f[]=bonny@100,300,400,500,700&f[]=pilcrow-rounded@400,500,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define font weight utility classes for Inter */
+.inter-100 {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+}
+
+.inter-200 {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+}
+
+.inter-300 {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
+
+.inter-400 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.inter-500 {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.inter-600 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+.inter-700 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+.inter-800 {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+}
+
+.inter-900 {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.font-bonny-thin {
+  font-family: "Bonny", serif;
+  font-weight: 100;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.dot-pattern {
+  --dot-bg: black;
+  --dot-color: white;
+  --dot-size: 1px;
+  --dot-space: 22px;
+  background: linear-gradient(
+        90deg,
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    linear-gradient(
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+}
+.box-pattern {
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: linear-gradient(#444cf7 1px, transparent 1px),
+    linear-gradient(to right, #444cf7 1px, #e5e5f7 1px);
+  background-size: 20px 20px;
+}
+/* Light */
+.font-bonny-light {
+  font-family: "Bonny", serif;
+  font-weight: 300;
+}
+.font-pilcrow-regular {
+  font-family: "Pilcrow Rounded", sans-serif;
+  font-weight: 400;
+}
+
+/* Regular */
+.font-bonny-regular {
+  font-family: "Bonny", serif;
+  font-weight: 400;
+}
+
+/* Medium */
+.font-bonny-medium {
+  font-family: "Bonny", serif;
+  font-weight: 500;
+}
+
+/* Bold */
+.font-bonny-bold {
+  font-family: "Bonny", serif;
+  font-weight: 700;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bg-primary {
+  background-color: rgb(7, 56, 122);
+}
+
+@media (min-width: 1280px) {
+  .hero-shape::before,
+  .hero-shape::after {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 30%;
+
+    font-weight: bold;
+    background-color: lightblue;
+    transition: all 0.5s;
+    z-index: -10;
+  }
+
+  .hero-shape::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+  }
+
+  .hero-shape::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
+  }
+}
+
+@keyframes slowBounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.animate-slow-bounce {
+  animation: slowBounce 10s ease-in-out infinite;
+}
+
+.custom-shadow {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.circle-gradient {
+  background: radial-gradient(
+    263px at 0.5% 70%,
+    rgb(12, 85, 141) 31.1%,
+    rgb(205, 181, 93) 36.4%,
+    rgb(244, 102, 90) 50.9%,
+    rgb(199, 206, 187) 60.7%,
+    rgb(249, 140, 69) 72.5%,
+    rgb(255, 255, 255) 72.6%
+  );
+}
+
+.toggler {
+  fill: black;
+  animation: rotate 10s linear infinite; /* Adjust duration (10s) as needed */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.line-loose {
+  line-height: 10rem;
+}
+
+@keyframes textRotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-textRotation {
+  animation: textRotation 8s linear infinite;
+}
+
+.outline-text {
+  background-color: #19192c;
+  opacity: 0.9;
+  background-image: linear-gradient(#393c70 1.3px, transparent 1.3px),
+    linear-gradient(to right, #393c70 1.3px, #19192c 1.3px);
+  background-size: 26px 26px;
+}
+
+.outline-fill {
+  width: fit-content;
+  text-align: center;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgb(189, 132, 27);
+  position: relative;
+  cursor: pointer;
+  background: linear-gradient(to right, orange 0%, orange 100%);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-size 0.5s ease;
+}
+
+.outline-fill:hover {
+  background-size: 100% 100%;
+}
+
+.background-gradient-1 {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgb(19, 14, 16) 10%,
+      rgb(52, 24, 27) 50%,
+      rgb(19, 14, 16) 90%
+    );
+}
+
+.background-gradient-2 {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      /* Dark at the top */ rgba(0, 0, 0, 0) 30%,
+      /* Transparent in the middle */ rgba(0, 0, 0, 0) 70%,
+      /* Transparent in the middle */ rgba(0, 0, 0, 0.8) 100%
+        /* Dark at the bottom */
+    ),
+    linear-gradient(
+      90deg,
+      rgb(19, 14, 16) 25%,
+      /* Darker sides */ rgb(15, 7, 8) 50%,
+      /* Reddish middle */ rgb(19, 14, 16) 75% /* Darker sides */
+    );
+}
+
+.background-dark-gradient {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      /* Dark at the top */ rgba(0, 0, 0, 0) 30%,
+      /* Transparent in the middle */ rgba(0, 0, 0, 0) 70%,
+      /* Transparent in the middle */ rgba(0, 0, 0, 0.8) 100%
+        /* Dark at the bottom */
+    ),
+    linear-gradient(
+      90deg,
+      rgb(19, 14, 16) 25%,
+      /* Darker sides */ rgb(0, 0, 0) 50%,
+      /* Reddish middle */ rgb(19, 14, 16) 75% /* Darker sides */
+    );
+}
+.inverted-curve {
+  border-radius: 20px 20px 0 0;
+}
+.inverted-curve::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: 0;
+  left: -50px;
+  height: 25px;
+  width: 50px;
+  border-radius: 0 0 20px 0;
+  -webkit-box-shadow: 25px 0 0 0 black;
+  box-shadow: 25px 0 0 0 black;
+}
+/* .inverted-curve::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: 0;
+  right: -50px;
+  height: 25px;
+  width: 50px;
+  border-radius: 0 0 0 20px;
+  -webkit-box-shadow: -25px 0 0 0 #222;
+  box-shadow: -25px 0 0 0 #222;
+} */
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  transform-origin: bottom;
+}
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  transform-origin: top;
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f5f5f5;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #cfcfcf;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #bdbdbd;
+  }
+}
+
+.dark-gradient {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      /* Dark at the top */ rgba(0, 0, 0, 0) 30%,
+      /* Transparent in the middle */ rgba(0, 0, 0, 0) 70%,
+      /* Transparent in the middle */ rgba(0, 0, 0, 0.8) 100%
+        /* Dark at the bottom */
+    ),
+    linear-gradient(
+      90deg,
+      rgb(14, 10, 12) 25%,
+      rgb(12, 6, 6) 50%,
+      /* Reddish middle */ rgb(19, 14, 16) 75% /* Darker sides */
+    );
+}
