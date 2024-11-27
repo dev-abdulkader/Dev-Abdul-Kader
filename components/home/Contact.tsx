@@ -42,7 +42,7 @@ const Contact: React.FC = () => {
           console.log(error);
         }
       );
-    console.log(data);
+    console.log("data is ", data);
   };
   return (
     <div className="bg-black" id="contact overflow-hidden">

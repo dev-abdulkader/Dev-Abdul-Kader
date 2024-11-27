@@ -30,10 +30,10 @@ const Hero = () => {
             </button>
           </a>
           <a
-            href="https://drive.google.com/uc?export=download&id=1qd8XvuMEbT8OYwLnXAYIY1JWyGFIfFOp"
-            download="Md.Abdul Kader-Mern-Stack-Developer.pdf" // Optional, specifies the name of the downloaded file
-            target="_blank" // Opens link in a new tab
-            rel="noopener noreferrer" // Security reasons when using target="_blank"
+            href="https://drive.google.com/uc?export=download&id=1mJbyNFwvyUnx67rz_w3LmGo6QppHTReo"
+            download="Md.Abdul Kader-Mern-Stack-Developer.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="cursor-pointer flex items-center px-10 py-1 hover:bg-lime-900 border-lime-600 border active:border active:border-lime-400 rounded-md duration-100"
           >
             <span className="text-xl font-pilcrow-regular text-lime-400 font-bold pr-1">
