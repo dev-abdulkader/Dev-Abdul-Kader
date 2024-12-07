@@ -68,11 +68,11 @@ const Hero = () => {
               </div>
               <TypeAnimation
                 sequence={[
-                  "MERN Stack Developer",
+                  "Full Stack Developer",
                   1500,
                   "Computer Science Background",
                   1500,
-                  "Intern at ZORG IT GROUP",
+                  "Ex Developer at ZORG IT GROUP",
                   1500,
                   "Web with NextJS",
                   1500,
