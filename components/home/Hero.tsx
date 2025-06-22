@@ -24,19 +24,19 @@ const Hero = () => {
         <div className=" z-10 absolute hidden md:flex gap-5 left-5 top-2">
           <a href="#contact">
             <button className="cursor-pointer flex items-center  px-10 hover:bg-lime-900 py-1  border-lime-600 border active:border active:border-lime-400 rounded-md duration-100 ">
-              <span className="text-xl font-pilcrow-regular text-lime-400 font-bold pr-1 ">
+              <span className="text-xl font-geist text-lime-400 font-bold pr-1 ">
                 Hire Me
               </span>
             </button>
           </a>
           <a
-            href="https://drive.google.com/uc?export=download&id=1mJbyNFwvyUnx67rz_w3LmGo6QppHTReo"
+            href="https://drive.google.com/uc?export=download&id=1gCPnG76QKnT1hmabGBeQsCET96wvDlt2"
             download="Md.Abdul Kader-Mern-Stack-Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="cursor-pointer flex items-center px-10 py-1 hover:bg-lime-900 border-lime-600 border active:border active:border-lime-400 rounded-md duration-100"
           >
-            <span className="text-xl font-pilcrow-regular text-lime-400 font-bold pr-1">
+            <span className="text-xl font-geist text-lime-400 font-bold pr-1">
               Download CV
             </span>
           </a>
@@ -56,7 +56,7 @@ const Hero = () => {
             <div className="mb-6 max-w-4xl md:text-6xl">
               <div className="flex gap-5 py-2">
                 <h1 className="text-3xl lg:leading-[4rem] lg:text-[5rem] text-white">
-                  <span className="font-bonny-regular ">MD ABDUL KADER</span>{" "}
+                  <span className="font-geist ">MD ABDUL KADER</span>{" "}
                 </h1>
                 <Image
                   src={profileImage}
@@ -72,20 +72,15 @@ const Hero = () => {
                   1500,
                   "Computer Science Background",
                   1500,
-                  "Ex Developer at ZORG IT GROUP",
+                  "Worked with 3 Companies",
                   1500,
-                  "Web with NextJS",
+                  "Contributed to 15+ Projects",
                   1500,
-                  "App with React Native",
 
-                  "Server with NodeJS",
-                  1500,
-                  "Design with Figma",
-                  1500,
                 ]}
                 wrapper="h1"
                 speed={50}
-                className="text-3xl font-pilcrow-regular lg:text-[4rem] lg:py-2 text-white sm:text-white cabinet-500 lg:leading-[4rem]"
+                className="text-3xl font-geist lg:text-[4rem] lg:py-2 text-white sm:text-white cabinet-500 lg:leading-[4rem]"
                 repeat={Infinity}
               />
             </div>
@@ -101,7 +96,7 @@ const Hero = () => {
                   per="word"
                   as="p"
                   preset="slide"
-                  className="text-sm lg:text-md text-gray-300 font-pilcrow-regular"
+                  className="text-sm lg:text-md text-gray-300 font-geist"
                 >
                   {heroContent[0].content[0]}
                 </TextEffect>
@@ -116,7 +111,7 @@ const Hero = () => {
                       href="https://www.facebook.com/abd.joni.9"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm lg:text-md text-gray-300 font-pilcrow-regular"
+                      className="text-sm lg:text-md text-gray-300 font-geist"
                     >
                       Facebook &#8599;
                     </a>
@@ -124,7 +119,7 @@ const Hero = () => {
                       href="https://github.com/abdulkader789"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm lg:text-md text-gray-300 font-pilcrow-regular"
+                      className="text-sm lg:text-md text-gray-300 font-geist"
                     >
                       Github &#8599;
                     </a>
@@ -132,7 +127,7 @@ const Hero = () => {
                       href="https://www.linkedin.com/in/md-abdul-kader-852871202/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm lg:text-md text-gray-300 font-pilcrow-regular"
+                      className="text-sm lg:text-md text-gray-300 font-geist"
                     >
                       LinkedIn &#8599;
                     </a>
@@ -140,7 +135,7 @@ const Hero = () => {
                       href="https://wa.me/8801788838782"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm lg:text-md text-gray-300 font-pilcrow-regular"
+                      className="text-sm lg:text-md text-gray-300 font-geist"
                     >
                       Whatsapp &#8599;
                     </a>

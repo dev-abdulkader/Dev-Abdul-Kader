@@ -46,10 +46,10 @@ const Contact: React.FC = () => {
   };
   return (
     <div className="bg-black" id="contact overflow-hidden">
-      <AnimatedWord
-        text="Contact Me"
-        className="text-center text-slate-500 text-7xl py-5 sm:text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-bonny-regular"
-      />
+
+      <h2 className="text-3xl  md:text-7xl mb-10 text-white text-center">
+        Contact Me
+      </h2>
       <div className="flex md:flex-row flex-col justify-center items-center px-3 py-20  lg:min-h-screen">
         <div className="md:w-1/2 w-full mb-5 md:mb-0">
           <MotionTransitionLeft>
@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
                 <h2 className="text-5xl  mb-4 font-bonny-medium">
                   Get in Touch
                 </h2>
-                <p className="mb-6 font-pilcrow-regular">
+                <p className="mb-6 font-geist">
                   Define your goals and identify areas where I can add value to
                   your business.
                 </p>
@@ -115,15 +115,14 @@ const Contact: React.FC = () => {
                 <div className="flex justify-end">
                   <button
                     type="submit"
-                    className={`${
-                      response === "Sending..."
-                        ? "bg-gray-500"
-                        : response === "Message Sent"
+                    className={`${response === "Sending..."
+                      ? "bg-gray-500"
+                      : response === "Message Sent"
                         ? "bg-green-600"
                         : response === "Sending Failed"
-                        ? "bg-red-500"
-                        : "bg-slate-800"
-                    } text-white w-[150px] py-2 rounded-lg active:scale-[0.96] transition-all`}
+                          ? "bg-red-500"
+                          : "bg-slate-800"
+                      } text-white w-[150px] py-2 rounded-lg active:scale-[0.96] transition-all`}
                   >
                     {response}
                   </button>
@@ -140,17 +139,17 @@ const Contact: React.FC = () => {
 const ContactInfo: React.FC = () => {
   return (
     <div className="text-white">
-      <h2 className=" md:text-5xl text-3xl w-3/4 mb-4 font-bonny-regular">
+      <h2 className=" md:text-5xl text-3xl w-3/4 mb-4 font-geist">
         I am always here to assist you and respond to your inquiries
       </h2>
-      <p className="mb-8 w-3/4 font-pilcrow-regular">
+      <p className="mb-8 w-3/4 font-geist">
         Whether you have questions, need assistance, or simply want to share
         your thoughts, I’m eager to hear from you. Feel free to connect with me
         through any of the methods below, and I will get back to you promptly. I
         look forward to hearing from you!
       </p>
 
-      <div className="grid grid-cols-2 font-pilcrow-regular">
+      <div className="grid grid-cols-2 font-geist">
         <div className="mb-4">
           <h3 className="mb-2">Contact Number</h3>
           <p>+8801788838782</p>

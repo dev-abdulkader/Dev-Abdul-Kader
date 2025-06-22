@@ -4,10 +4,9 @@ import AnimatedWord from "../motion/AnimatedWord";
 const MyVideos = () => {
   return (
     <div className="py-10 bg-slate-800">
-      <AnimatedWord
-        text="Check My Videos"
-        className="text-center text-slate-500 text-7xl py-5 sm:text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-bonny-regular"
-      />
+      <h2 className="text-3xl text-white  md:text-7xl mb-10  text-center">
+        Check My Videos
+      </h2>
       <div className="flex justify-center py-5 gap-5 flex-col md:flex-row flex-wrap">
         <iframe
           className="rounded-2xl w-full sm:w-[560px] h-auto aspect-video"

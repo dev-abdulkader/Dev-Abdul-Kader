@@ -14,7 +14,7 @@
 //           {text.split("").map((char, i) => (
 //             <span
 //               key={i}
-//               className="absolute font-bonny-regular"
+//               className="absolute font-geist"
 //               style={{
 //                 transform: `rotate(${
 //                   i * (360 / text.length)
@@ -96,29 +96,29 @@ const AnimatedCircleText: React.FC = () => {
   const text = "About - Projects - Experiences - ";
   const [translateY, setTranslateY] = useState(90); // Initial translateY value
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollY = window.scrollY;
 
-      // Calculate new translateY based on scroll position
-      let newTranslateY = 120 + scrollY / 10; // Adjust the divisor to control speed
+  //     // Calculate new translateY based on scroll position
+  //     let newTranslateY = 120 + scrollY / 10; // Adjust the divisor to control speed
 
-      // Ensure translateY does not go below the initial value of 70
-      if (scrollY <= 0) {
-        newTranslateY = 90;
-      }
+  //     // Ensure translateY does not go below the initial value of 70
+  //     if (scrollY <= 0) {
+  //       newTranslateY = 90;
+  //     }
 
-      setTranslateY(newTranslateY);
-    };
+  //     setTranslateY(newTranslateY);
+  //   };
 
-    // Attach the scroll event listener
-    window.addEventListener("scroll", handleScroll);
+  //   // Attach the scroll event listener
+  //   window.addEventListener("scroll", handleScroll);
 
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   // Cleanup the event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <div className="relative animated-text-container w-[140px] h-[140px] rounded-full flex items-center justify-center group">
@@ -131,11 +131,10 @@ const AnimatedCircleText: React.FC = () => {
           {text.split("").map((char, i) => (
             <span
               key={i}
-              className="absolute font-bonny-regular"
+              className="absolute font-geist"
               style={{
-                transform: `rotate(${
-                  i * (360 / text.length)
-                }deg) translateY(-${translateY}px)`,
+                transform: `rotate(${i * (360 / text.length)
+                  }deg) translateY(-${translateY}px)`,
                 transformOrigin: "center center",
                 transition: "transform 0.2s ease-in-out", // Smooth transform on scroll
               }}

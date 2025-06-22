@@ -19,8 +19,7 @@ export const heroContent: ContentSection[] = [
   {
     section: "Introduction",
     content: [
-      `I am a MERN stack developer intern at ZORGT IT GROUP and a Computer Science student from Primeasia University, Dhaka. I have a strong background in web development, having worked as both a front-end and back-end developer.`,
-      "I believe that my skills and experience make me an excellent candidate for any web development role, and I look forward to putting my talents to good use!",
+      "I’m a full-stack developer skilled in web and mobile development, with expertise in front-end, back-end, CI/CD, Docker, and cloud hosting.",
     ],
   },
 ];

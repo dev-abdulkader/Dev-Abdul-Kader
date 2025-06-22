@@ -34,7 +34,7 @@ const TechStack = () => {
               <div className="size-10 sm:size-12 md:size-14 bg-white rounded-full flex justify-center items-center p-3">
                 {tech.icon}
               </div>
-              <p className="mt-2 text-md font-pilcrow-regular text-white">
+              <p className="mt-2 text-md font-geist text-white">
                 {tech.name}
               </p>
             </div>

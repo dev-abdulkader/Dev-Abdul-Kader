@@ -53,22 +53,22 @@ const Footer = () => {
         aria-labelledby="footer-links-heading"
       >
         <li>
-          <a href="#" className="font-bonny-regular text-7xl">
+          <a href="#" className="font-geist text-7xl">
             Home
           </a>
         </li>
         <li>
-          <a href="#" className="font-bonny-regular text-7xl">
+          <a href="#" className="font-geist text-7xl">
             About
           </a>
         </li>
         <li>
-          <a href="#" className="font-bonny-regular text-7xl">
+          <a href="#" className="font-geist text-7xl">
             TechStack
           </a>
         </li>
         <li>
-          <a href="#" className="font-bonny-regular text-7xl">
+          <a href="#" className="font-geist text-7xl">
             Projects
           </a>
         </li>
