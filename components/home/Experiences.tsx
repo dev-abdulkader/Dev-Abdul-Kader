@@ -83,8 +83,8 @@ export default function Experiences() {
         <section className="py-16 dark-gradient text-gray-100">
             <div className="container mx-auto px-4">
 
-                <h2 className="text-3xl  md:text-7xl mb-10 text-white text-center">
-                    My Experieneces
+                <h2 className="text-3xl  md:text-7xl my-10 text-white text-center">
+                    My Experiences
                 </h2>
                 <div className="grid gap-6 lg:grid-cols-2">
                     <div className="lg:py-6 lg:pr-16">

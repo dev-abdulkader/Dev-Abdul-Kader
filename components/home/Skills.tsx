@@ -92,7 +92,7 @@ const Skills: React.FC = () => {
   return (
     <div className=" overflow-hidden  relative z-10 dark-gradient" id="skills">
       <section className="">
-        <h2 className="text-3xl text-white  md:text-7xl mb-10  text-center">
+        <h2 className="text-3xl text-white   md:text-7xl my-10  text-center">
           My Skills
         </h2>
         <div className="flex justify-center items-center">

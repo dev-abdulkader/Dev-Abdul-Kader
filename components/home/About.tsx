@@ -38,7 +38,7 @@ const About: React.FC = () => {
         <h2 className="text-3xl text-white  md:text-7xl mb-10  text-center">
           About Me
         </h2>
-        <p className="mb-8 max-w-lg text-sm text-gray-500 sm:text-xl lg:mb-24 font-geist">
+        <p className="mb-8 text-center text-sm text-gray-500 sm:text-xl lg:mb-24 font-geist">
           I&apos;m a dedicated software developer with a strong background in
           full-stack web development. My journey started in 2019, and since
           then, I have been passionate about creating meaningful digital

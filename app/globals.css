@@ -18,16 +18,9 @@ html {
 }
 
 body {
-  font-family: "Geist", sans-serif;
-
+  font-family: 'Pilcrow Rounded', sans-serif;
 }
 
-
-
-.font-geist {
-  font-family: "Geist", sans-serif;
-
-}
 
 .dot-pattern {
   --dot-bg: black;
