@@ -116,7 +116,7 @@ const Hero = () => {
                       Facebook &#8599;
                     </a>
                     <a
-                      href="https://github.com/abdulkader789"
+                      href="https://github.com/dev-abdulkader"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm lg:text-md text-gray-300 font-geist"
