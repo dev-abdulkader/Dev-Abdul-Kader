@@ -19,7 +19,7 @@ import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 import { motion } from "framer-motion";
 const Hero = () => {
   return (
-    <div className="p-5  relative w-full overflow-hidden bg-[#c5fb45]">
+    <div className="p-5  relative w-full h-screen overflow-hidden bg-[#c5fb45]">
       <div className="inverted-curve  relative bg-black h-10 w-2/3 ml-auto">
         <div className=" z-10 absolute hidden md:flex gap-5 left-5 top-2">
           <a href="#contact">
@@ -45,8 +45,8 @@ const Hero = () => {
 
       <header
         id="home"
-        className="relative pb-20  background-gradient-2 rounded-l-2xl rounded-br-2xl "
-        style={{ boxShadow: "none" }} // Add this to ensure there's no box shadow
+        className="relative pb-20   background-gradient-2  rounded-l-2xl rounded-br-2xl "
+        style={{ height: "calc(100vh - 5rem)", boxShadow: "none" }}
       >
         {/* Hero top */}
         <div className="py-8">
