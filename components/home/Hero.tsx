@@ -19,7 +19,7 @@ import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 import { motion } from "framer-motion";
 const Hero = () => {
   return (
-    <div className="p-5  relative w-full h-screen overflow-hidden bg-[#c5fb45]">
+    <div className="p-5  relative w-full min-h-screen overflow-hidden bg-[#c5fb45]">
       <div className="inverted-curve  relative bg-black h-10 w-2/3 ml-auto">
         <div className=" z-10 absolute hidden md:flex gap-5 left-5 top-2">
           <a href="#contact">
