@@ -43,7 +43,7 @@ const CustomArrow = () => {
    mx-auto shadow-xl text-lg  backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full  hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10  overflow-hidden   group
     "
     >
-      <span className="svg items-center hidden sm:flex py-10 rotate-45">
+      <span className="svg items-center sm:flex py-10 rotate-45">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="90" // increased from 50 to 100
@@ -96,29 +96,6 @@ const AnimatedCircleText: React.FC = () => {
   const text = "About - Projects - Experiences - ";
   const [translateY, setTranslateY] = useState(90); // Initial translateY value
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollY = window.scrollY;
-
-  //     // Calculate new translateY based on scroll position
-  //     let newTranslateY = 120 + scrollY / 10; // Adjust the divisor to control speed
-
-  //     // Ensure translateY does not go below the initial value of 70
-  //     if (scrollY <= 0) {
-  //       newTranslateY = 90;
-  //     }
-
-  //     setTranslateY(newTranslateY);
-  //   };
-
-  //   // Attach the scroll event listener
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   // Cleanup the event listener on component unmount
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
 
   return (
     <div className="relative animated-text-container w-[140px] h-[140px] rounded-full flex items-center justify-center group">

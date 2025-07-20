@@ -24,8 +24,9 @@ const experiences: Experience[] = [
         location: "Chattogram, Bangladesh • On-site",
         type: "Full-time",
         description: [
-            "Developed and maintained full-stack applications using Next.js and Node.js.",
-            "Contributed to scalable web solutions with a focus on performance and user experience."
+            "Leading full-stack development for Dinmajur.com, managing both frontend and backend architecture.",
+            "Responsible for end-to-end development including API design, UI implementation, DevOps, VPS setup, Docker containerization, automated testing, and deployment.",
+            "Overseeing project delivery, performance optimization, and production support"
         ],
         skills: ["Next.js", "Node.js", "TypeScript", "React", "MongoDB", "Express.js"]
     },
@@ -36,16 +37,8 @@ const experiences: Experience[] = [
         location: "Dhaka, Bangladesh • On-site",
         type: "Full-time",
         description: [
-            "Developed and maintained backend services using Node.js, Express.js, Prisma, Mongoose, and MongoDB.",
-            "Implemented robust authentication and authorization systems, including token-based and OTP-based flows.",
-            "Integrated third-party payment gateways and external API services for dynamic data interactions.",
-            "Built real-time features such as chat functionality and live updates using Socket.IO (WebSockets).",
-            "Designed and managed RESTful APIs for both frontend and third-party integration.",
-            "Worked on full-stack development with Next.js for frontend and Express.js for backend logic.",
-            "Contributed to a scalable B2B platform, handling key modules like onboarding, dashboard, and communication tools.",
-            "Developed a booking system application with scheduling, calendar integration, and admin panel management.",
-            "Built a comprehensive management system, including dashboards, user roles, and real-time data insights.",
-            "Collaborated in an agile environment, ensuring timely delivery and clean, maintainable code."
+            "Worked on building booking systems, management tools, eCommerce platforms, dashboards, and social media features.",
+            "Contributed to real-time functionality, secure payment integration, and scalable platform development across multiple projects."
         ],
         skills: ["Node.js", "Express.js", "Prisma", "Mongoose", "MongoDB", "Socket.IO"]
     },
@@ -70,7 +63,6 @@ const experiences: Experience[] = [
         description: [
             "Gained hands-on experience in full-stack web development using MongoDB, Express.js, React, and Node.js.",
             "Collaborated remotely with a team of developers, contributing to various projects by writing clean, efficient code.",
-            "Implemented best practices in both front-end and back-end development."
         ],
         skills: ["React.js", "MongoDB", "Express.js", "Node.js", "JavaScript"]
     }

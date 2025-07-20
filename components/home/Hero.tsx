@@ -30,8 +30,8 @@ const Hero = () => {
             </button>
           </a>
           <a
-            href="https://drive.google.com/uc?export=download&id=1gCPnG76QKnT1hmabGBeQsCET96wvDlt2"
-            download="Md.Abdul Kader-Mern-Stack-Developer.pdf"
+            href="https://drive.google.com/uc?export=download&id=13jv0QDFkPrd8WJkxQ2VVKVQlEitc2nKt"
+            download="Md.Abdul-Kader-MERN-Stack-Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="cursor-pointer flex items-center px-10 py-1 hover:bg-lime-900 border-lime-600 border active:border active:border-lime-400 rounded-md duration-100"
@@ -40,13 +40,14 @@ const Hero = () => {
               Download CV
             </span>
           </a>
+
+
         </div>
       </div>
 
       <header
         id="home"
-        className="relative pb-20   background-gradient-2  rounded-l-2xl rounded-br-2xl "
-        style={{ height: "calc(100vh - 5rem)", boxShadow: "none" }}
+        className="relative lg:pb-20   background-gradient-2  rounded-l-2xl rounded-br-2xl "
       >
         {/* Hero top */}
         <div className="py-8">

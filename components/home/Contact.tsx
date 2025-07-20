@@ -12,11 +12,9 @@ import {
 import FormTextarea from "../forms/FormTextarea";
 import Form from "../forms/Form";
 import FormInput from "../forms/FormInput";
-import FormSelect from "../forms/FormSelect";
 import emailjs from "@emailjs/browser";
 import MotionTransitionLeft from "../motion/MotionTransitionLeft";
 import MotionTransitionRight from "../motion/MotionTransitionRight";
-import AnimatedWord from "../motion/AnimatedWord";
 
 const Contact: React.FC = () => {
   const [response, setResponse] = useState("Send Message");
@@ -44,9 +42,9 @@ const Contact: React.FC = () => {
       );
     console.log("data is ", data);
   };
+
   return (
     <div className="bg-black" id="contact overflow-hidden">
-
       <h2 className="text-3xl  md:text-7xl mb-10 text-white text-center">
         Contact Me
       </h2>
@@ -74,44 +72,36 @@ const Contact: React.FC = () => {
                 <FormInput
                   name="fullName"
                   label="Full Name"
-                  placeholder="Full Name"
+                  placeholder="Enter your full name"
                   required
-                  className="w-full py-2 border-b border-gray-300 focus:outline-none focus:border-black"
+                  className="w-full px-4 py-3 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
                 />
                 <FormInput
                   name="phoneNumber"
                   label="Phone Number"
-                  placeholder="Phone Number"
+                  placeholder="Enter your phone number"
                   required
-                  className="w-full py-2 border-b border-gray-300 focus:outline-none focus:border-black"
+                  className="w-full px-4 py-3 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
                 />
 
                 <FormInput
                   name="email"
                   type="email"
                   label="Email"
-                  placeholder="Email Address"
+                  placeholder="Enter your email"
                   required
-                  className="w-full py-2 border-b border-gray-300 focus:outline-none focus:border-black"
+
+                  className="w-full px-4 py-3 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
                 />
-                {/* <FormSelect
-              name="enquiryType"
-              label="What is your enquiry about?"
-              options={[
-                { value: "1", label: "Option 1" },
-                { value: "2", label: "Option 2" },
-                { value: "3", label: "Option 3" },
-              ]}
-              required
-              className="bg-[#F1F1F1] rounded-md p-3 outline-none focus:outline-none"
-            /> */}
+
                 <FormTextarea
                   name="message"
-                  label="Additional Information"
-                  placeholder="Your Message"
+                  label="Your Message"
+                  placeholder="Enter your message"
                   required
-                  className="w-full  py-2 border-b border-gray-300 focus:outline-none focus:border-black"
+                  className="w-full px-4 py-3 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
                 />
+
                 <div className="flex justify-end">
                   <button
                     type="submit"
@@ -139,7 +129,7 @@ const Contact: React.FC = () => {
 const ContactInfo: React.FC = () => {
   return (
     <div className="text-white">
-      <h2 className=" md:text-5xl text-3xl w-3/4 mb-4 font-geist">
+      <h2 className="md:text-5xl text-3xl w-3/4 mb-4 font-geist">
         I am always here to assist you and respond to your inquiries
       </h2>
       <p className="mb-8 w-3/4 font-geist">
@@ -157,7 +147,7 @@ const ContactInfo: React.FC = () => {
 
         <div className="mb-4">
           <h3 className="mb-2">My Location</h3>
-          <p>Dhaka,Bangladesh</p>
+          <p>Dhaka, Bangladesh</p>
         </div>
 
         <div className="mb-4">

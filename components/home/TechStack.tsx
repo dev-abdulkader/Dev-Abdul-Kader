@@ -97,10 +97,9 @@ const techStackIcons = [
 ];
 
 const TechStack = () => {
-  // const firstHalf = techStackIcons.slice(0, techStackIcons.length / 2);
-  // const secondHalf = techStackIcons.slice(techStackIcons.length / 2);
+
   return (
-    <section className="py-10  relative overflow-hidden">
+    <section className="py-10  relative overflow-hidden rounded-2xl">
       {/* Gradient shadows */}
       <div className="pointer-events-none absolute top-0 left-0 h-full w-32 bg-gradient-to-r from-[#0e0e0e] to-transparent z-10" />
       <div className="pointer-events-none absolute top-0 right-0 h-full w-32 bg-gradient-to-l from-[#0e0e0e] to-transparent z-10" />
@@ -120,20 +119,6 @@ const TechStack = () => {
         ))}
       </Marquee>
 
-      {/* Bottom Row (reverse direction) */}
-      {/* <Marquee speed={50} direction="right" gradient={false}>
-        {secondHalf.map((tech, index) => (
-          <div
-            key={`row2-${index}`}
-            className="flex flex-col items-center justify-center mx-20"
-          >
-            <div className="bg-white rounded-full p-3 shadow-lg">
-              {tech.icon}
-            </div>
-            <p className="mt-2 text-sm text-white">{tech.name}</p>
-          </div>
-        ))}
-      </Marquee> */}
     </section>
   );
 };

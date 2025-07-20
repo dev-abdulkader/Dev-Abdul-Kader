@@ -36,11 +36,11 @@ const FormTextarea = ({
 
   return (
     <div className={`flex flex-col mb-4`}>
-      {/* {label && (
-        <label className="mb-2 font-semibold text-gray-700">
+      {label && (
+        <label className="mb-2 text-xl font-semibold text-gray-700">
           {label} {required && <span className="text-red-500">*</span>}
         </label>
-      )} */}
+      )}
       <Controller
         name={name}
         control={control}
