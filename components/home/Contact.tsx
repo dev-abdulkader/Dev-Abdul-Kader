@@ -12,11 +12,9 @@ import {
 import FormTextarea from "../forms/FormTextarea";
 import Form from "../forms/Form";
 import FormInput from "../forms/FormInput";
-import FormSelect from "../forms/FormSelect";
 import emailjs from "@emailjs/browser";
 import MotionTransitionLeft from "../motion/MotionTransitionLeft";
 import MotionTransitionRight from "../motion/MotionTransitionRight";
-import AnimatedWord from "../motion/AnimatedWord";
 
 const Contact: React.FC = () => {
   const [response, setResponse] = useState("Send Message");
@@ -44,12 +42,12 @@ const Contact: React.FC = () => {
       );
     console.log("data is ", data);
   };
+
   return (
     <div className="bg-black" id="contact overflow-hidden">
-      <AnimatedWord
-        text="Contact Me"
-        className="text-center text-slate-500 text-7xl py-5 sm:text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-bonny-regular"
-      />
+      <h2 className="text-3xl  md:text-7xl mb-10 text-white text-center">
+        Contact Me
+      </h2>
       <div className="flex md:flex-row flex-col justify-center items-center px-3 py-20  lg:min-h-screen">
         <div className="md:w-1/2 w-full mb-5 md:mb-0">
           <MotionTransitionLeft>
@@ -64,7 +62,7 @@ const Contact: React.FC = () => {
                 <h2 className="text-5xl  mb-4 font-bonny-medium">
                   Get in Touch
                 </h2>
-                <p className="mb-6 font-pilcrow-regular">
+                <p className="mb-6 font-geist">
                   Define your goals and identify areas where I can add value to
                   your business.
                 </p>
@@ -74,56 +72,47 @@ const Contact: React.FC = () => {
                 <FormInput
                   name="fullName"
                   label="Full Name"
-                  placeholder="Full Name"
+                  placeholder="Enter your full name"
                   required
-                  className="w-full py-2 border-b border-gray-300 focus:outline-none focus:border-black"
+                  className="w-full px-4 py-3 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
                 />
                 <FormInput
                   name="phoneNumber"
                   label="Phone Number"
-                  placeholder="Phone Number"
+                  placeholder="Enter your phone number"
                   required
-                  className="w-full py-2 border-b border-gray-300 focus:outline-none focus:border-black"
+                  className="w-full px-4 py-3 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
                 />
 
                 <FormInput
                   name="email"
                   type="email"
                   label="Email"
-                  placeholder="Email Address"
+                  placeholder="Enter your email"
                   required
-                  className="w-full py-2 border-b border-gray-300 focus:outline-none focus:border-black"
+
+                  className="w-full px-4 py-3 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
                 />
-                {/* <FormSelect
-              name="enquiryType"
-              label="What is your enquiry about?"
-              options={[
-                { value: "1", label: "Option 1" },
-                { value: "2", label: "Option 2" },
-                { value: "3", label: "Option 3" },
-              ]}
-              required
-              className="bg-[#F1F1F1] rounded-md p-3 outline-none focus:outline-none"
-            /> */}
+
                 <FormTextarea
                   name="message"
-                  label="Additional Information"
-                  placeholder="Your Message"
+                  label="Your Message"
+                  placeholder="Enter your message"
                   required
-                  className="w-full  py-2 border-b border-gray-300 focus:outline-none focus:border-black"
+                  className="w-full px-4 py-3 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
                 />
+
                 <div className="flex justify-end">
                   <button
                     type="submit"
-                    className={`${
-                      response === "Sending..."
-                        ? "bg-gray-500"
-                        : response === "Message Sent"
+                    className={`${response === "Sending..."
+                      ? "bg-gray-500"
+                      : response === "Message Sent"
                         ? "bg-green-600"
                         : response === "Sending Failed"
-                        ? "bg-red-500"
-                        : "bg-slate-800"
-                    } text-white w-[150px] py-2 rounded-lg active:scale-[0.96] transition-all`}
+                          ? "bg-red-500"
+                          : "bg-slate-800"
+                      } text-white w-[150px] py-2 rounded-lg active:scale-[0.96] transition-all`}
                   >
                     {response}
                   </button>
@@ -140,17 +129,17 @@ const Contact: React.FC = () => {
 const ContactInfo: React.FC = () => {
   return (
     <div className="text-white">
-      <h2 className=" md:text-5xl text-3xl w-3/4 mb-4 font-bonny-regular">
+      <h2 className="md:text-5xl text-3xl w-3/4 mb-4 font-geist">
         I am always here to assist you and respond to your inquiries
       </h2>
-      <p className="mb-8 w-3/4 font-pilcrow-regular">
+      <p className="mb-8 w-3/4 font-geist">
         Whether you have questions, need assistance, or simply want to share
         your thoughts, I’m eager to hear from you. Feel free to connect with me
         through any of the methods below, and I will get back to you promptly. I
         look forward to hearing from you!
       </p>
 
-      <div className="grid grid-cols-2 font-pilcrow-regular">
+      <div className="grid grid-cols-2 font-geist">
         <div className="mb-4">
           <h3 className="mb-2">Contact Number</h3>
           <p>+8801788838782</p>
@@ -158,7 +147,7 @@ const ContactInfo: React.FC = () => {
 
         <div className="mb-4">
           <h3 className="mb-2">My Location</h3>
-          <p>Dhaka,Bangladesh</p>
+          <p>Dhaka, Bangladesh</p>
         </div>
 
         <div className="mb-4">

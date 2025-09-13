@@ -10,7 +10,8 @@ const Blogs = () => {
       <section className="bg-indigo-50 px-5 py-16 md:px-10 md:py-20">
         <div className="mx-auto w-full max-w-7xl flex flex-col items-stretch md:px-10">
           {/* Title */}
-          <h2 className="text-3xl  md:text-7xl mb-10 melodrama-600 text-center">
+
+          <h2 className="text-3xl text-white  md:text-7xl mb-10  text-center">
             Blogs I have Written
           </h2>
         </div>

@@ -88,7 +88,7 @@ const Menu = () => {
               <div className="menu-link-item-holder py-5 w-full border-b-2 border-black overflow-hidden">
                 <Link
                   href={link.path}
-                  className="menu-link font-bonny-regular text-7xl md:text-[7rem] w-full block text-center relative top-[8rem] " // Add top value to make it hide
+                  className="menu-link font-geist text-7xl md:text-[7rem] w-full block text-center relative top-[8rem] " // Add top value to make it hide
                 >
                   {link.label}
                 </Link>

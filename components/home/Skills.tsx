@@ -92,10 +92,9 @@ const Skills: React.FC = () => {
   return (
     <div className=" overflow-hidden  relative z-10 dark-gradient" id="skills">
       <section className="">
-        <AnimatedWord
-          text="Teck & Skill"
-          className="text-center text-slate-500 text-7xl py-5 sm:text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-bonny-regular"
-        />
+        <h2 className="text-3xl text-white   md:text-7xl my-10  text-center">
+          My Skills
+        </h2>
         <div className="flex justify-center items-center">
           <div className="solar-system">
             <div className="sun size-[100px]"></div>
@@ -170,11 +169,10 @@ const Skills: React.FC = () => {
           {servicesData.map((service, index) => (
             <div
               key={service.id}
-              className={`transition-colors duration-300 hover:bg-[#0f0f0e] flex flex-col gap-5 ${
-                index === 0 || index === 3
-                  ? "col-span-12 sm:col-span-6 md:col-span-7"
-                  : "col-span-12  sm:col-span-6 md:col-span-5 "
-              } bg-[#0A0A0A] border border-slate-800 rounded-md p-10 flex flex-col justify-between`}
+              className={`transition-colors duration-300 hover:bg-[#0f0f0e] flex flex-col gap-5 ${index === 0 || index === 3
+                ? "col-span-12 sm:col-span-6 md:col-span-7"
+                : "col-span-12  sm:col-span-6 md:col-span-5 "
+                } bg-[#0A0A0A] border border-slate-800 rounded-md p-10 flex flex-col justify-between`}
             >
               <div className="flex justify-end">
                 <div
@@ -186,17 +184,16 @@ const Skills: React.FC = () => {
               </div>
               <div className="flex flex-col  gap-5">
                 <h2>({service.id})</h2>
-                <h2 className="font-bonny-regular uppercase text-4xl">
+                <h2 className="font-geist uppercase text-4xl">
                   {service.title}
                 </h2>
-                <p className="font-pilcrow-regular">{service.description}</p>
+                <p className="font-geist">{service.description}</p>
               </div>
               <div
-                className={`grid overflow-hidden transition-all duration-300 ease-in-out  ${
-                  openServiceId === service.id
-                    ? "grid-rows-[1fr]  opacity-100"
-                    : "grid-rows-[0fr] opacity-0"
-                }`}
+                className={`grid overflow-hidden transition-all duration-300 ease-in-out  ${openServiceId === service.id
+                  ? "grid-rows-[1fr]  opacity-100"
+                  : "grid-rows-[0fr] opacity-0"
+                  }`}
               >
                 <div className="overflow-hidden pr-4">
                   {service.techStack.length > 0 && (
@@ -207,7 +204,7 @@ const Skills: React.FC = () => {
                           className="bg-[#0A0A0A] border border-slate-800 rounded-md inline-flex gap-5 items-center justify-between px-5 py-3"
                         >
                           {tech.icon}
-                          <span className="text-md font-pilcrow-regular">
+                          <span className="text-md font-geist">
                             {tech.label}
                           </span>
                         </div>

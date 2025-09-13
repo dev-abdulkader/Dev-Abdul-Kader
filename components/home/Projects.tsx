@@ -207,10 +207,9 @@ const Projects = () => {
 
   return (
     <div className="dot-pattern py-10">
-      <AnimatedWord
-        text="Real Projects"
-        className="text-center text-slate-500 text-7xl py-5 sm:text-[4rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] font-bonny-regular"
-      />
+      <h2 className="text-3xl text-white  md:text-7xl mb-10  text-center">
+        Real Projects
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 p-4 max-w-7xl mx-auto w-full">
         {projectData.map((project) => (
           <MotionOpacity key={project.id}>
@@ -233,7 +232,7 @@ const Projects = () => {
                   <CustomArrow />
                 </a>
               </div>
-              <p className="text-white text-md font-pilcrow-regular">
+              <p className="text-white text-md font-geist">
                 {project.description}
               </p>
 
@@ -256,7 +255,7 @@ const Projects = () => {
                 {/* <h3 className="text-2xl font-bold mb-4">
                   {project.description}
                 </h3> */}
-                {/* <p className="text-lg mb-4 font-pilcrow-regular">
+                {/* <p className="text-lg mb-4 font-geist">
                   {project.contribution}
                 </p> */}
                 <div className="flex gap-3 flex-wrap justify-center items-center">
