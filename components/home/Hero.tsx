@@ -9,7 +9,7 @@ import { TextEffect } from "../core/text-effect"
 export default function Hero() {
     return (
         <div className="bg-black w-full relative">
-            <nav className="absolute top-9 left-1/2 -translate-x-1/2 hidden lg:flex items-center space-x-4">
+            {/* <nav className="absolute top-7 left-1/2 -translate-x-1/2 hidden lg:flex items-center space-x-4">
                 {["HOME", "PROFESSIONAL EXPERIENCE", "PROJECTS", "BLOG", "CONTACT ME"].map(
                     (link) => (
                         <a
@@ -21,7 +21,7 @@ export default function Hero() {
                         </a>
                     )
                 )}
-            </nav>
+            </nav> */}
             <div className="absolute bottom-0 left-0 -inset-0 right-0 opacity-15 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]">
                 <VerticalBarsNoise />
             </div>
@@ -40,7 +40,7 @@ export default function Hero() {
 
 
                     <Social />
-                    <div className="flex   flex-col justify-center max-w-lg">
+                    <div className="flex   flex-col  max-w-lg">
                         <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-4">
                             Full-stack developer and hacker driven by a passion for building
                             efficient, secure applications. Expertise in web development, with a

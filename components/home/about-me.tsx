@@ -27,8 +27,7 @@ export default function AboutMe() {
                     className="sm:text-base text-sm max-w-2xl mx-auto"
                 >
                     <TextEffect per="word" as="p" preset="blur" >
-                        I love creating web applications that are not only functional but also
-                        enjoyable to use.
+                        Experienced developer with 2+ years of expertise in programming languages and software development frameworks, committed to continuous learning and delivering exceptional results.
                     </TextEffect>
                 </div>
             </div>
@@ -36,14 +35,13 @@ export default function AboutMe() {
             {/* Personal Statement */}
             <div
 
-                className="max-w-screen-lg mx-auto space-y-4 flex flex-col justify-center"
+                className="max-w-screen-2xl mx-auto space-y-4 flex flex-col justify-center"
             >
                 <Quote className="w-10 h-10 fill-white rotate-180" />
 
-                <p className="sm:text-4xl md:text-5xl text-3xl sm:mb-6 mb-3 sm:px-10 px-5">
-                    I enjoy turning ideas into reality, building interfaces that delight users
-                    and systems that work seamlessly behind the scenes.
-                </p>
+                <TextEffect per="word" as="p" preset="blur" className="sm:text-4xl md:text-5xl text-3xl sm:mb-6 mb-3 sm:px-10 px-5">
+                    As an innovative Full-Stack Developer, I have strong expertise in modern JavaScript frameworks such as React and Next.js, and backend frameworks including Node.js, Express, and NestJS. I am well-versed in building scalable applications following best practices, with experience in microservices architecture, CI/CD pipelines, Docker, and cloud hosting. Additionally, I have hands-on experience in mobile app development using React Native, enabling me to deliver end-to-end solutions across web and mobile platforms.
+                </TextEffect>
             </div>
         </div>
     );
