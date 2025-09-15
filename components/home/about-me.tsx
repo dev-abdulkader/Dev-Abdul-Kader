@@ -40,7 +40,7 @@ export default function AboutMe() {
                 <Quote className="w-10 h-10 fill-white rotate-180" />
 
                 <TextEffect per="word" as="p" preset="blur" className="sm:text-4xl md:text-5xl text-3xl sm:mb-6 mb-3 sm:px-10 px-5">
-                    As an innovative Full-Stack Developer, I have strong expertise in modern JavaScript frameworks such as React and Next.js, and backend frameworks including Node.js, Express, and NestJS. I am well-versed in building scalable applications following best practices, with experience in microservices architecture, CI/CD pipelines, Docker, and cloud hosting. Additionally, I have hands-on experience in mobile app development using React Native, enabling me to deliver end-to-end solutions across web and mobile platforms.
+                    As an innovative Full-Stack Developer, I have strong expertise in modern JavaScript frameworks such as React and Next.js, and backend frameworks including Node.js, Express, and NestJS. I am well-versed in building scalable applications following best practices, with experience in microservices architecture, CI/CD pipelines, Docker, and cloud hosting.
                 </TextEffect>
             </div>
         </div>

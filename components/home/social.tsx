@@ -8,8 +8,8 @@ export default function Social() {
 
 
             {/* View Projects Section */}
-            <div className="flex items-center gap-3">
-                <Button variant="ghost" size="sm" className="text-gray-300 hover:text-black transition-colors" asChild>
+            <div className="flex items-center gap-3 mr-5">
+                <Button variant="ghost" size="sm" className="text-gray-300 hover:text-black hover:bg-green-400 transition-colors" asChild>
                     <a href="#projects" className="flex items-center gap-2">
                         <FolderOpen className="w-4 h-4" />
                         <span className="text-sm font-medium">Download Resume</span>
@@ -31,7 +31,7 @@ export default function Social() {
                     </a>
                 </Button>
 
-                <Button variant="ghost" size="sm" className="text-gray-400 hover:text-black transition-colors p-2" asChild>
+                <Button variant="ghost" size="sm" className="text-black bg-white hover:text-black transition-colors p-2" asChild>
                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                         <Linkedin className="w-4 h-4" />
                     </a>

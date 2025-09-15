@@ -27,7 +27,7 @@ export default function StickyContainer() {
     }, []);
 
     return (
-        <main ref={container} className="relative h-[500vh]">
+        <main ref={container} className="relative h-[600vh]">
             <Section1 />
             <StickySection
                 start={0.0}
@@ -41,35 +41,36 @@ export default function StickyContainer() {
                 end={0.25}
                 scrollYProgress={scrollYProgress}
             >
-
             </StickySection>
-
             <StickySection
-                start={0.5} end={0.75}
+                start={0.4}
+                end={0.65}
                 scrollYProgress={scrollYProgress}
+                scaleRange={[0.85, 1]}
+                widthRange={["50vw", "100vw"]}
+                heightRange={["50vh", "100vh"]}
+                yRange={["50vh", "0vh"]}
             >
                 <Experience />
             </StickySection>
-
-
-
             <StickySection
-                start={0.5} end={0.75}
+                start={0.4}
+                end={0.65}
                 scrollYProgress={scrollYProgress}
-
-            />
+            >
+            </StickySection>
             <StickySection
-                start={0.75} end={1.0}
+                start={0.65}
+                end={1.0}
                 scrollYProgress={scrollYProgress}
                 color="bg-[#f7f7f7]"
-
-            />
-
-
+                zIndex="z-20"
+                yRange={["100vh", "0vh"]}
+            >
+            </StickySection>
         </main>
     );
 }
-
 
 const Section1 = () => {
     const [isDark, setIsDark] = useState(false);
@@ -91,16 +92,9 @@ const Section1 = () => {
         <div
             className={`sticky top-0 h-screen text-[3.5vw] flex flex-col items-center justify-center transition-colors duration-500 bg-gradient-to-b from-black via-red-950 to-red-900 text-white`}
         >
-
         </div>
     );
 };
-
-
-
-
-
-
 
 const StickySection = ({
     scrollYProgress,
@@ -109,6 +103,10 @@ const StickySection = ({
     color,
     zIndex,
     children,
+    scaleRange = [0.8, 1],
+    widthRange = ["50vw", "100vw"],
+    heightRange = ["50vh", "100vh"],
+    yRange = [0, 0],
 }: {
     scrollYProgress: any;
     start: number;
@@ -116,22 +114,26 @@ const StickySection = ({
     color?: string;
     zIndex?: string;
     children?: React.ReactNode;
+    scaleRange?: [number, number];
+    widthRange?: [string, string];
+    heightRange?: [string, string];
+    yRange?: [string | number, string | number];
 }) => {
     const localProgress = useTransform(scrollYProgress, [start, end], [0, 1]);
-    const scale = useTransform(localProgress, [0, 1], [0.8, 1]);
-    const width = useTransform(localProgress, [0, 1], ["50vw", "100vw"]);
-    const height = useTransform(localProgress, [0, 1], ["50vh", "100vh"]);
+    const scale = useTransform(localProgress, [0, 1], scaleRange);
+    const width = useTransform(localProgress, [0, 1], widthRange);
+    const height = useTransform(localProgress, [0, 1], heightRange);
+    const y = useTransform(localProgress, [0, 1], yRange);
 
     return (
         <motion.div
-            style={{ scale }}
-            className={`sticky ${zIndex} top-0 h-screen flex items-center justify-center overflow-hidden`}
+            style={{ scale, y }}
+            className={`sticky ${zIndex || 'z-10'} top-0 h-screen flex items-center justify-center overflow-hidden`}
         >
             <motion.div
                 style={{ width, height }}
-                className={`relative flex items-center justify-center ${color} `}
+                className={`relative flex items-center justify-center ${color || ''}`}
             >
-
                 {children}
             </motion.div>
         </motion.div>
