@@ -16,9 +16,9 @@ export default function AboutMe() {
                     transition={{ duration: 1.2, ease: "easeOut" }}
                     className="sm:text-4xl text-2xl font-bold mb-4"
                 >
-                    Passionate About{" "}
+                    Hi, I&apos;m {" "}
                     <span className="bg-white/20 border border-white rounded-lg italic px-2">
-                        Building Digital Experiences
+                        Abdul Kader
                     </span>
                 </motion.h2>
 

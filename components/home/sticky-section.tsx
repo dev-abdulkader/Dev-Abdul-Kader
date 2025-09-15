@@ -36,24 +36,30 @@ export default function StickyContainer() {
             >
                 <AboutMe />
             </StickySection>
+            <StickySection
+                start={0.0}
+                end={0.25}
+                scrollYProgress={scrollYProgress}
+            >
+
+            </StickySection>
 
             <StickySection
-                start={0.25}
-                end={0.5}
+                start={0.5} end={0.75}
                 scrollYProgress={scrollYProgress}
             >
                 <Experience />
             </StickySection>
+
+
+
             <StickySection
-                start={0.25}
-                end={0.5}
-                zIndex="-z-10"
+                start={0.5} end={0.75}
                 scrollYProgress={scrollYProgress}
 
             />
             <StickySection
-                start={0.25}
-                end={0.5}
+                start={0.75} end={1.0}
                 scrollYProgress={scrollYProgress}
                 color="bg-[#f7f7f7]"
 

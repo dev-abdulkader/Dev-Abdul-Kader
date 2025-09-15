@@ -18,7 +18,7 @@ const Navbar = () => {
         <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
             <div className="container mx-auto px-4 sm:px-8 py-6 flex items-center justify-between">
                 {/* Logo */}
-                <div className="bg-white/20 border text-white sm:text-4xl text-2xl font-bold border-gray-400 rounded-lg italic px-2">ABDUL.IO</div>
+                <div className="bg-gradient-to-b opacity-80 from-black via-black to-red-950 to-red-900 text-white border text-white sm:text-4xl text-2xl font-bold border-gray-400 rounded-lg italic px-2">ABDUL.IO</div>
 
 
                 {/* Custom Hamburger Icon */}
