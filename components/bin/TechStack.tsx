@@ -72,28 +72,24 @@ import {
   SiGraphql,
   SiRedis,
   SiSocketdotio,
+  SiPostgresql,
 } from "react-icons/si";
 
 const techStackIcons = [
-  { icon: <FaJsSquare size={50} color="#F7DF1E" />, name: "JavaScript" },
-  { icon: <FaReact size={50} color="#61DAFB" />, name: "React" },
-  { icon: <SiNextdotjs size={50} color="#000000" />, name: "Next.js" },
-  { icon: <SiTailwindcss size={50} color="#38B2AC" />, name: "TailwindCSS" },
-  { icon: <SiRedux size={50} color="#764ABC" />, name: "Redux" },
-  { icon: <FaAngular size={50} color="#DD0031" />, name: "Angular" },
-  { icon: <FaReact size={50} color="#61DAFB" />, name: "React Native" },
-  { icon: <FaNodeJs size={50} color="#339933" />, name: "Node.js" },
-  { icon: <SiExpress size={50} color="#000000" />, name: "Express.js" },
-  { icon: <SiNestjs size={50} color="#E0234E" />, name: "NestJS" },
-  { icon: <FaPython size={50} color="#3776AB" />, name: "Python" },
-  { icon: <SiDjango size={50} color="#092E20" />, name: "Django" },
-  { icon: <SiMongodb size={50} color="#47A248" />, name: "MongoDB" },
-  { icon: <SiMysql size={50} color="#00758F" />, name: "MySQL" },
-  { icon: <SiGraphql size={50} color="#E10098" />, name: "GraphQL" },
-  { icon: <SiRedis size={50} color="#DC382D" />, name: "Redis" },
-  { icon: <SiSocketdotio size={50} color="#010101" />, name: "Socket.IO" },
-  { icon: <FaDocker size={50} color="#2496ED" />, name: "Docker" },
-  { icon: <FaGithub size={50} color="#181717" />, name: "GitHub Actions" },
+  { icon: <FaJsSquare size={25} color="#F7DF1E" />, name: "JavaScript" },
+  { icon: <FaReact size={25} color="#61DAFB" />, name: "React" },
+  { icon: <SiNextdotjs size={25} color="#000000" />, name: "Next.js" },
+  { icon: <FaReact size={25} color="#61DAFB" />, name: "React Native" },
+  { icon: <FaNodeJs size={25} color="#339933" />, name: "Node.js" },
+  { icon: <SiExpress size={25} color="#000000" />, name: "Express.js" },
+  { icon: <SiNestjs size={25} color="#E0234E" />, name: "NestJS" },
+  { icon: <SiDjango size={25} color="#092E20" />, name: "Django" },
+  { icon: <SiPostgresql size={25} color="#764ABC" />, name: "PostgreSQL" },
+  { icon: <SiMongodb size={25} color="#47A248" />, name: "MongoDB" },
+  { icon: <SiGraphql size={25} color="#E10098" />, name: "GraphQL" },
+  { icon: <SiSocketdotio size={25} color="#010101" />, name: "Socket.IO" },
+  { icon: <FaDocker size={25} color="#2496ED" />, name: "Docker" },
+  { icon: <FaGithub size={25} color="#181717" />, name: "GitHub Actions" },
 ];
 
 const TechStack = () => {
@@ -109,7 +105,7 @@ const TechStack = () => {
         {techStackIcons.map((tech, index) => (
           <div
             key={`row1-${index}`}
-            className="flex flex-col items-center justify-center mx-20"
+            className="flex flex gap-5 items-center justify-center mx-20"
           >
             <div className="bg-white rounded-full p-3 shadow-lg">
               {tech.icon}

@@ -1,6 +1,7 @@
 "use client";
-import { motion, Variants } from "framer-motion";
+
 import React from "react";
+import { motion, Variants, HTMLMotionProps } from "framer-motion";
 
 type PresetType = "blur" | "shake" | "scale" | "fade" | "slide";
 
@@ -28,15 +29,11 @@ const defaultContainerVariants: Variants = {
 
 const defaultItemVariants: Variants = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-  },
+  visible: { opacity: 1 },
 };
 
-const presetVariants: Record<
-  PresetType,
-  { container: Variants; item: Variants }
-> = {
+const presetVariants: Record<PresetType, { container: Variants; item: Variants }> =
+{
   blur: {
     container: defaultContainerVariants,
     item: {
@@ -84,7 +81,7 @@ const AnimationComponent: React.FC<{
       <motion.span
         aria-hidden="true"
         variants={variants}
-        className="inline-block whitespace-pre "
+        className="inline-block whitespace-pre"
       >
         {word}
       </motion.span>
@@ -98,7 +95,7 @@ const AnimationComponent: React.FC<{
           key={`char-${charIndex}`}
           aria-hidden="true"
           variants={variants}
-          className="inline-block whitespace-pre "
+          className="inline-block whitespace-pre"
         >
           {char}
         </motion.span>
@@ -118,17 +115,23 @@ export function TextEffect({
   preset,
 }: TextEffectProps) {
   const words = children.split(/(\S+)/);
-  const MotionTag = motion[as as keyof typeof motion];
+
+  // Explicitly type the motion tag for any HTML element
+  type MotionTagProps = HTMLMotionProps<any> & { children: React.ReactNode };
+  const MotionTag = motion[as as keyof typeof motion] as React.FC<MotionTagProps>;
+
   const selectedVariants = preset
     ? presetVariants[preset]
     : { container: defaultContainerVariants, item: defaultItemVariants };
+
   const containerVariants = variants?.container || selectedVariants.container;
   const itemVariants = variants?.item || selectedVariants.item;
 
   return (
     <MotionTag
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.3 }} // triggers every time 30% is in view
       aria-label={children}
       variants={containerVariants}
       className={className}
@@ -141,6 +144,9 @@ export function TextEffect({
           per={per}
         />
       ))}
-    </MotionTag>
+
+
+
+    </MotionTag >
   );
 }

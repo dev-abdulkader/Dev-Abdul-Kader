@@ -7,7 +7,7 @@ import { MdOutlineFacebook } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
 import { CiLinkedin } from "react-icons/ci";
 import { GrGithub } from "react-icons/gr";
-import TechStack from "./../../home/TechStack";
+import TechStack from "../../bin/TechStack";
 
 const Footer = () => {
   return (
