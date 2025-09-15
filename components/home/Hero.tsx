@@ -8,30 +8,39 @@ import { TextEffect } from "../core/text-effect"
 
 export default function Hero() {
     return (
-        <div className="bg-black ">
+        <div className="bg-black w-full relative">
+            <nav className="absolute top-9 left-1/2 -translate-x-1/2 hidden lg:flex items-center space-x-4">
+                {["HOME", "PROFESSIONAL EXPERIENCE", "PROJECTS", "BLOG", "CONTACT ME"].map(
+                    (link) => (
+                        <a
+                            key={link}
+                            href={`#${link.toLowerCase().replace(" ", "-")}`}
+                            className="text-white hover:text-gray-300 transition duration-300"
+                        >
+                            {link}
+                        </a>
+                    )
+                )}
+            </nav>
             <div className="absolute bottom-0 left-0 -inset-0 right-0 opacity-15 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]">
                 <VerticalBarsNoise />
             </div>
-            <div className="relative min-h-screen  max-w-7xl mx-auto px-5 py-20">
+            <div className="relative min-h-screen flex flex-col justify-center  h-full  container mx-auto px-5 py-20">
+                <h1 className="text-4xl md:text-8xl lg:text-9xl font-black leading-[1.3] md:leading-none mb-8">
+                    <TextEffect per="char" preset="shake" as="span"
+                        className="text-white block" >FULL STACK</TextEffect>
 
-                {/* Main Content */}
-                <div className="relative ">
-                    {/* Left Column */}
-                    <div>
-                        <h1 className="text-4xl md:text-8xl lg:text-9xl font-black leading-[1.3] md:leading-none mb-8">
-                            <TextEffect per="char"  preset="shake" as="span"
-                                className="text-white block" >FULL STACK</TextEffect>
+                    <TextEffect per="char" preset="blur" as="span"
+                        className="text-gray-600/60 block" >DEVELOPER</TextEffect>
 
-                            <TextEffect per="char" preset="blur" as="span"
-                                className="text-gray-600/60 block" >DEVELOPER</TextEffect>
+                </h1>
 
-                        </h1>
+                {/* Left Column */}
+                <div className="flex flex-col md:flex-row justify-between">
 
-                        <Social />
-                    </div>
 
-                    {/* Right Column */}
-                    <div className="flex lg:absolute max-w-lg flex-col justify-center right-0 lg:top-[75%]">
+                    <Social />
+                    <div className="flex   flex-col justify-center max-w-lg">
                         <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-4">
                             Full-stack developer and hacker driven by a passion for building
                             efficient, secure applications. Expertise in web development, with a
@@ -48,6 +57,8 @@ export default function Hero() {
                         </Button>
                     </div>
                 </div>
+
+
 
                 <div className=" pt-8">
                     <div className="mb-4">
