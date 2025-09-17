@@ -11,55 +11,72 @@ import mooncosmetics from "@/public/mooncosmetics.png";
 import heyjabi from "@/public/heyjabi.png";
 import stationary from "@/public/stationary.png";
 import dinmajur from "@/public/dinmajur.png";
-
+import { HiArrowRight } from "react-icons/hi2";
+// Project data
 // Project data
 const projects = [
     {
         id: 1,
         title: "Skyline Tower Renovation",
-        description: "DinMajur is a modern peer-to-peer platform that connects skilled freelancers with clients.",
-        duration: "12 months",
         category: "Commercial",
+        company: "DinMajur",
+        timeline: "Jan 2023 - Dec 2023",
+        description:
+            "DinMajur is a modern peer-to-peer platform that connects skilled freelancers with clients.",
         image: dinmajur,
-        bgColor: "#f7f7f7", // Light gray
+        bgColor: "#f7f7f7",
+        liveLink: "https://dinmajur.com",
     },
     {
         id: 2,
         title: "Green Oasis Residential",
-        description: "A luxury residential complex featuring eco-friendly materials and smart home technology.",
-        duration: "18 months",
         category: "Residential",
+        company: "EcoBuild Ltd",
+        timeline: "Mar 2022 - Aug 2023",
+        description:
+            "A luxury residential complex featuring eco-friendly materials and smart home technology.",
         image: ecommerce,
-        bgColor: "#1d4c57", // Dark teal
+        bgColor: "#1d4c57",
+        liveLink: "https://greenoasis.com",
     },
     {
         id: 3,
         title: "Urban Hub Mixed-Use",
-        description: "A vibrant mixed-use development combining retail, office spaces, and residential units.",
-        duration: "24 months",
         category: "Mixed-Use",
+        company: "MoonCosmetics Dev Team",
+        timeline: "Jan 2021 - Dec 2022",
+        description:
+            "A vibrant mixed-use development combining retail, office spaces, and residential units.",
         image: mooncosmetics,
-        bgColor: "#4a2b3c", // Dark red
+        bgColor: "#4a2b3c",
+        liveLink: "https://urbanhub.com",
     },
     {
         id: 4,
         title: "Cloth Shop",
-        description: "An ecommerce project developed during an internship at Zorg IT.",
-        duration: "6 months",
         category: "Ecommerce",
+        company: "Zorg IT",
+        timeline: "Feb 2022 - Jul 2022",
+        description:
+            "An ecommerce project developed during an internship at Zorg IT.",
         image: realestate,
-        bgColor: "#1e3a5f", // Dark blue
+        bgColor: "#1e3a5f",
+        liveLink: "https://clothshop.com",
     },
     {
         id: 5,
         title: "Stationary Website",
-        description: "A project developed for a local client, focusing on frontend development.",
-        duration: "8 months",
         category: "Commercial",
+        company: "Local Client",
+        timeline: "Jan 2021 - Aug 2021",
+        description:
+            "A project developed for a local client, focusing on frontend development.",
         image: stationary,
-        bgColor: "#3a2f1e", // Dark brown
+        bgColor: "#3a2f1e",
+        liveLink: "https://stationarywebsite.com",
     },
 ];
+
 
 // HorizontalScrollCarousel Component
 interface HorizontalScrollCarouselProps {
@@ -96,7 +113,7 @@ export const HorizontalScrollCarousel: React.FC<HorizontalScrollCarouselProps> =
     return (
         <section ref={targetRef} className="relative h-[800vh]">
             <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-                <motion.div ref={containerRef} style={{ x }} className="flex gap-6 px-[35vw]">
+                <motion.div ref={containerRef} style={{ x }} className="flex  px-[35vw]">
                     {children}
                 </motion.div>
             </div>
@@ -109,8 +126,10 @@ interface ProjectItem {
     id: number;
     title: string;
     description: string;
-    duration: string;
     category: string;
+    company: string;
+    timeline: string;
+    liveLink: string;
     image: StaticImageData;
     bgColor: string;
 }
@@ -122,8 +141,10 @@ interface ProjectCardProps extends ProjectItem {
 const ProjectCard: React.FC<ProjectItem & { onClick: () => void }> = ({
     title,
     description,
-    duration,
     category,
+    company,
+    timeline,
+    liveLink,
     image,
     onClick,
 }) => {
@@ -144,10 +165,10 @@ const ProjectCard: React.FC<ProjectItem & { onClick: () => void }> = ({
             initial="initial"
             whileHover="hover" // triggers children variants
         >
-            <div className="h-[90vh] rounded-xl shadow-md relative overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                {/* Image with scale animation */}
+            {/* Image with scale animation */}
+            <div className="  h-[80vh] shadow-md relative overflow-hidden">
                 <motion.div
-                    className="relative w-full h-full"
+                    className="relative w-full h-full "
                     variants={imageVariants}
                     transition={{ duration: 0.5, ease: "easeOut" }}
                 >
@@ -156,36 +177,30 @@ const ProjectCard: React.FC<ProjectItem & { onClick: () => void }> = ({
                         alt={title}
                         fill
                         style={{ objectFit: "cover" }}
-                        className="rounded-xl"
+                        className=""
                     />
                 </motion.div>
 
-                {/* Overlay content */}
-                <motion.div
-                    className="absolute inset-0 flex flex-col justify-center items-center bg-black/30 backdrop-blur-md text-white p-6"
-                    variants={overlayVariants}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                >
-                    <h3 className="text-2xl font-semibold text-center">{title}</h3>
-                    <p className="text-sm line-clamp-4 text-center mt-2">{description}</p>
-                    <div className="flex items-center gap-4 text-sm mt-4">
-                        <div className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" />
-                            <span>{duration}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                            <Building2 className="w-4 h-4" />
-                            <span>{category}</span>
-                        </div>
-                    </div>
 
-                    <button
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg mt-6 transition-all duration-300"
-                        onClick={onClick}
-                    >
-                        View Project <ArrowRight className="ml-2 h-4 w-4 inline-block" />
-                    </button>
-                </motion.div>
+            </div>
+            {/* Overlay content */}
+            <div
+                className="flex justify-between  mt-2   text-white "
+
+            >
+                <div className=" flex items-center gap-5">
+                    <h3 className="text-md">{title}</h3>
+                    <p className="text-sm line-clamp-4 ">{category}</p>
+                </div>
+                <div className=" flex items-center gap-5">
+                    <h3 className="text-md">{company}</h3>
+                    <p className="text-sm line-clamp-4 ">{timeline}</p>
+                </div>
+                <div className=" flex items-center gap-5">
+                    {/* <h3 className="text-md">Live Link </h3> */}
+                    <HiArrowRight size={30} />
+                </div>
+
             </div>
         </motion.div>
     );
@@ -233,9 +248,11 @@ export default function ProjectsSection() {
                         id={project.id}
                         title={project.title}
                         description={project.description}
-                        duration={project.duration}
                         category={project.category}
+                        company={project.company}
+                        timeline={project.timeline}
                         image={project.image}
+                        liveLink={project.liveLink}
                         bgColor={project.bgColor}
                         onClick={() => handleCardClick(project)}
                     />

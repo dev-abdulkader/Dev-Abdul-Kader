@@ -1,6 +1,5 @@
-import AboutMe from "@/components/home/about-me";
-import Experience from "@/components/home/experience";
-import Hero from "@/components/home/hero";
+
+import Hero from "@/components/home/Hero";
 import ProjectsSection from "@/components/home/project-section";
 import StickyContainer from "@/components/home/sticky-section";
 
