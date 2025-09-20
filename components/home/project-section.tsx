@@ -22,7 +22,7 @@ const projects = [
         company: "DinMajur",
         timeline: "Jan 2023 - Dec 2023",
         description:
-            "DinMajur is a modern peer-to-peer platform that connects skilled freelancers with clients.",
+            "Dinmajur is a modern peer-to-peer platform that connects skilled freelancers with clients.",
         image: dinmajur,
         bgColor: "#f7f7f7",
         liveLink: "https://dinmajur.com",
@@ -196,10 +196,7 @@ const ProjectCard: React.FC<ProjectItem & { onClick: () => void }> = ({
                     <h3 className="text-md">{company}</h3>
                     <p className="text-sm line-clamp-4 ">{timeline}</p>
                 </div>
-                <div className=" flex items-center gap-5">
-                    {/* <h3 className="text-md">Live Link </h3> */}
-                    <HiArrowRight size={30} />
-                </div>
+
 
             </div>
         </motion.div>
