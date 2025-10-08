@@ -37,7 +37,7 @@ const FormTextarea = ({
   return (
     <div className={`flex flex-col mb-4`}>
       {label && (
-        <label className="mb-2 text-xl font-semibold text-gray-700">
+        <label className="mb-2 text-sm text-gray-700">
           {label} {required && <span className="text-red-500">*</span>}
         </label>
       )}

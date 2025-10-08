@@ -3,78 +3,25 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
-import { ArrowRight, Building2, Clock } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import realestate from "@/public/realestate.png";
 import ecommerce from "@/public/ecommerce.png";
 import mooncosmetics from "@/public/mooncosmetics.png";
-import heyjabi from "@/public/heyjabi.png";
 import stationary from "@/public/stationary.png";
-import dinmajur from "@/public/dinmajur.png";
-import { HiArrowRight } from "react-icons/hi2";
+import dinmajur from "@/public/project/dinmajur.png";
+import ProjectCard from "./project-card";
 // Project data
 // Project data
+
 const projects = [
     {
         id: 1,
-        title: "Skyline Tower Renovation",
-        category: "Commercial",
-        company: "DinMajur",
-        timeline: "Jan 2023 - Dec 2023",
-        description:
-            "Dinmajur is a modern peer-to-peer platform that connects skilled freelancers with clients.",
+
         image: dinmajur,
-        bgColor: "#f7f7f7",
+        bgColor: "#1d4c57",
         liveLink: "https://dinmajur.com",
     },
-    {
-        id: 2,
-        title: "Green Oasis Residential",
-        category: "Residential",
-        company: "EcoBuild Ltd",
-        timeline: "Mar 2022 - Aug 2023",
-        description:
-            "A luxury residential complex featuring eco-friendly materials and smart home technology.",
-        image: ecommerce,
-        bgColor: "#1d4c57",
-        liveLink: "https://greenoasis.com",
-    },
-    {
-        id: 3,
-        title: "Urban Hub Mixed-Use",
-        category: "Mixed-Use",
-        company: "MoonCosmetics Dev Team",
-        timeline: "Jan 2021 - Dec 2022",
-        description:
-            "A vibrant mixed-use development combining retail, office spaces, and residential units.",
-        image: mooncosmetics,
-        bgColor: "#4a2b3c",
-        liveLink: "https://urbanhub.com",
-    },
-    {
-        id: 4,
-        title: "Cloth Shop",
-        category: "Ecommerce",
-        company: "Zorg IT",
-        timeline: "Feb 2022 - Jul 2022",
-        description:
-            "An ecommerce project developed during an internship at Zorg IT.",
-        image: realestate,
-        bgColor: "#1e3a5f",
-        liveLink: "https://clothshop.com",
-    },
-    {
-        id: 5,
-        title: "Stationary Website",
-        category: "Commercial",
-        company: "Local Client",
-        timeline: "Jan 2021 - Aug 2021",
-        description:
-            "A project developed for a local client, focusing on frontend development.",
-        image: stationary,
-        bgColor: "#3a2f1e",
-        liveLink: "https://stationarywebsite.com",
-    },
+
 ];
 
 
@@ -134,74 +81,7 @@ interface ProjectItem {
     bgColor: string;
 }
 
-interface ProjectCardProps extends ProjectItem {
-    onClick: () => void;
-}
 
-const ProjectCard: React.FC<ProjectItem & { onClick: () => void }> = ({
-    title,
-    description,
-    category,
-    company,
-    timeline,
-    liveLink,
-    image,
-    onClick,
-}) => {
-    // Motion variants for image scaling
-    const imageVariants = {
-        initial: { scale: 1 },
-        hover: { scale: 1.15 },
-    };
-
-    const overlayVariants = {
-        initial: { opacity: 0 },
-        hover: { opacity: 1 },
-    };
-
-    return (
-        <motion.div
-            className="w-[50vw] flex-shrink-0 p-2 group"
-            initial="initial"
-            whileHover="hover" // triggers children variants
-        >
-            {/* Image with scale animation */}
-            <div className="  h-[80vh] shadow-md relative overflow-hidden">
-                <motion.div
-                    className="relative w-full h-full "
-                    variants={imageVariants}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                >
-                    <Image
-                        src={image}
-                        alt={title}
-                        fill
-                        style={{ objectFit: "cover" }}
-                        className=""
-                    />
-                </motion.div>
-
-
-            </div>
-            {/* Overlay content */}
-            <div
-                className="flex justify-between  mt-2   text-white "
-
-            >
-                <div className=" flex items-center gap-5">
-                    <h3 className="text-md">{title}</h3>
-                    <p className="text-sm line-clamp-4 ">{category}</p>
-                </div>
-                <div className=" flex items-center gap-5">
-                    <h3 className="text-md">{company}</h3>
-                    <p className="text-sm line-clamp-4 ">{timeline}</p>
-                </div>
-
-
-            </div>
-        </motion.div>
-    );
-};
 
 
 // ProjectsSection Component
@@ -235,23 +115,17 @@ export default function ProjectsSection() {
     return (
         <motion.section
             ref={sectionRef}
-            style={{ background: projects[activeIndex].bgColor }}
-            className="py-12 transition-colors duration-300"
+            // style={{ background: projects[activeIndex].bgColor }}
+            className="py-12 transition-colors bg-black duration-300"
         >
             <HorizontalScrollCarousel>
                 {projects.map((project) => (
                     <ProjectCard
                         key={project.id}
-                        id={project.id}
-                        title={project.title}
-                        description={project.description}
-                        category={project.category}
-                        company={project.company}
-                        timeline={project.timeline}
-                        image={project.image}
-                        liveLink={project.liveLink}
+
+                        visitLink={project.liveLink}
+                        img={project.image}
                         bgColor={project.bgColor}
-                        onClick={() => handleCardClick(project)}
                     />
                 ))}
             </HorizontalScrollCarousel>

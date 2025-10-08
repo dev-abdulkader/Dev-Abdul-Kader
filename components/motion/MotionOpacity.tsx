@@ -17,7 +17,7 @@ const MotionOpacity: React.FC<MotionOpacityProps> = ({
   delay = 0,
   initialOpacity = 0,
   finalOpacity = 1,
-  initialY = -30, // Default to starting 20px above
+  initialY = -100, // Default to starting 20px above
   finalY = 0, // Default to ending at the original position
 }) => {
   return (

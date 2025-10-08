@@ -39,7 +39,7 @@ const FormInput = ({
 
   return (
     <div>
-      <label className="block text-xl mb-1 font-semibold">
+      <label className="block text-sm mb-1 ">
         {label ? label : null}
         {required ? <span className="text-red-500">*</span> : null}
       </label>
