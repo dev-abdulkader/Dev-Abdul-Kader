@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
     return (
         <div className="bg-black overflow-hidden" id="contact">
 
-            <div className="flex md:flex-row flex-col justify-center items-center px-3 py-20 gap-10">
+            <div className="flex md:flex-row max-w-7xl mx-auto px-5 flex-col justify-center items-center py-20 gap-10">
                 {/* Left side: Info */}
                 <div className="md:w-1/2 w-full">
                     <MotionTransitionLeft>
@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
                                     label="Full Name"
                                     placeholder="Enter your full name"
                                     required
-                                    className="w-full px-4 py-3 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
+                                    className="w-full px-4 py-2 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
                                 />
 
                                 <FormInput
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
                                     label="Phone Number"
                                     placeholder="Enter your phone number"
                                     required
-                                    className="w-full px-4 py-3 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
+                                    className="w-full px-4 py-2 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
                                 />
 
                                 <FormInput
@@ -81,7 +81,7 @@ const Contact: React.FC = () => {
                                     label="Email"
                                     placeholder="Enter your email"
                                     required
-                                    className="w-full px-4 py-3 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
+                                    className="w-full px-4 py-2 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
                                 />
 
                                 <FormTextarea
@@ -118,15 +118,8 @@ const Contact: React.FC = () => {
 
 const ContactInfo: React.FC = () => {
     return (
-        <div className="text-white font-geist">
-            <h2 className="md:text-5xl text-3xl w-3/4 mb-4">
-                I am always here to assist you and respond to your inquiries
-            </h2>
-            <p className="mb-8 w-3/4 text-gray-300">
-                Whether you have questions, need assistance, or simply want to share
-                your thoughts, I’m eager to hear from you. Feel free to connect with me
-                through any of the methods below, and I will get back to you promptly.
-            </p>
+        <div className="text-white text-sm font-geist">
+
 
             <div className="grid grid-cols-2 gap-6">
                 <div>

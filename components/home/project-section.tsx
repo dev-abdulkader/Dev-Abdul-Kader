@@ -58,7 +58,7 @@ export const HorizontalScrollCarousel: React.FC<HorizontalScrollCarouselProps> =
     );
 
     return (
-        <section ref={targetRef} className="relative h-[800vh]">
+        <section ref={targetRef} className="relative h-[200vh]">
             <div className="sticky top-0 flex h-screen items-center overflow-hidden">
                 <motion.div ref={containerRef} style={{ x }} className="flex  px-[35vw]">
                     {children}

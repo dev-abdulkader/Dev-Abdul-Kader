@@ -10,7 +10,7 @@ export default function AboutMe() {
             className={`
                  transition-colors duration-500 bg-gradient-to-b from-black via-red-950 to-red-900 text-white`}
         >
-            <div className="grid place-content-center max-w-7xl mx-auto py-40 text-white min-h-screen">
+            <div className="grid place-content-center py-12 max-w-7xl mx-auto  text-white min-h-screen">
                 {/* Header */}
                 <div className="text-center mb-12">
                     <motion.h2

@@ -34,32 +34,7 @@ export default function VideoSection(): JSX.Element {
 // ================= Background Animation =================
 // ================= Background Animation triggered by "MY VIDEOS" =================
 // ================= Background Animation triggered by "MY VIDEOS" =================
-const BackgroundAnimation: React.FC = () => {
-    const sectionRef = useRef(null);
-    const inView = useInView(sectionRef, { amount: 0.5, once: true }); // trigger only once
-    const controls = useAnimation();
 
-    useEffect(() => {
-        if (inView) {
-            controls.start({ height: "100%" }); // grow when in view
-        }
-    }, [inView, controls]);
-
-    return (
-        <>
-            {/* Observed text section */}
-            <div ref={sectionRef} className="absolute top-0 left-0 w-full h-screen" />
-
-            {/* Animated background */}
-            <motion.div
-                className="absolute top-0 left-0 w-full bg-slate-900 z-0"
-                initial={{ height: 0 }}
-                animate={controls}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-            />
-        </>
-    );
-};
 
 
 
@@ -83,11 +58,11 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
     return (
         <div
             ref={container}
-            className="h-screen flex justify-center items-center sticky top-0"
+            className="md:h-screen bg-red-100 flex justify-center items-center sticky top-0"
         >
             <motion.div
                 style={{ backgroundColor: "#000", y: translateY }}
-                className="flex flex-col items-center justify-center h-[500px] w-[70%] rounded-xl p-6 shadow-xl"
+                className="flex flex-col items-center justify-center w-[90vw] md:h-[500px] md:w-[70%] rounded-xl p-6 shadow-xl"
             >
                 <div className="w-full h-full flex justify-center items-center">
                     <iframe

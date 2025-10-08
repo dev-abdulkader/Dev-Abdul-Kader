@@ -18,7 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ img, visitLink, bgColor }) =>
     return (
         <MotionOpacity>
             <div
-                className="relative w-[40vw] mr-10  rounded-md h-[500px] md:h-[550px] lg:h-[600px] flex flex-col gap-5 overflow-hidden"
+                className="relative w-[90vw]  md:w-[40vw] mr-10  rounded-md md:h-[500px] md:h-[550px] lg:h-[600px] flex flex-col gap-5 overflow-hidden"
                 style={{ backgroundColor: bgColor }}
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}

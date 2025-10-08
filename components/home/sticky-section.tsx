@@ -10,7 +10,7 @@ export default function StickyContainer() {
     const container = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        const lenis = new Lenis({  lerp: 0.08, duration: 1.2 });
+        const lenis = new Lenis({ lerp: 0.08, duration: 1.2 });
 
         function raf(time: any) {
             lenis.raf(time);
@@ -32,8 +32,8 @@ export default function StickyContainer() {
             <StickySection
                 scrollProgress={scrollProgress}
                 scaleRange={[0.5, 1]}
-                widthRange={["50vw", "100vw"]}
-                heightRange={["50vh", "100vh"]}
+                widthRange={["30vw", "100vw"]}
+                heightRange={["30vh", "100vh"]}
                 yRange={["50vh", "0vh"]}
             >
                 <Experience />

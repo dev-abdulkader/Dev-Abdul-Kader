@@ -8,43 +8,43 @@ import { useEffect, useRef } from "react"
 import TextSplit from "../motion/text-split"
 
 export default function Hero() {
-    // const particleContainerRef = useRef<HTMLDivElement | null>(null);
+    const particleContainerRef = useRef<HTMLDivElement | null>(null);
 
-    // useEffect(() => {
-    //     const container = particleContainerRef.current;
-    //     if (!container) return;
+    useEffect(() => {
+        const container = particleContainerRef.current;
+        if (!container) return;
 
-    //     // Create all particles once
-    //     const totalParticles = 50;
-    //     for (let i = 0; i < totalParticles; i++) {
-    //         const particle = document.createElement("div");
-    //         particle.className = "particle";
+        // Create all particles once
+        const totalParticles = 50;
+        for (let i = 0; i < totalParticles; i++) {
+            const particle = document.createElement("div");
+            particle.className = "particle";
 
-    //         // Random size 2-6px
-    //         const size = Math.random() * 4 + 2;
-    //         particle.style.width = `${size}px`;
-    //         particle.style.height = `${size}px`;
+            // Random size 2-6px
+            const size = Math.random() * 4 + 2;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
 
-    //         // Random horizontal position
-    //         particle.style.left = `${Math.random() * 100}vw`;
+            // Random horizontal position
+            particle.style.left = `${Math.random() * 100}vw`;
 
-    //         // Random animation duration 3-7s
-    //         const duration = Math.random() * 4 + 3;
-    //         particle.style.animationDuration = `${duration}s`;
+            // Random animation duration 3-7s
+            const duration = Math.random() * 4 + 3;
+            particle.style.animationDuration = `${duration}s`;
 
-    //         // Random animation delay so particles are not synchronized
-    //         const delay = Math.random() * 7;
-    //         particle.style.animationDelay = `${delay}s`;
+            // Random animation delay so particles are not synchronized
+            const delay = Math.random() * 7;
+            particle.style.animationDelay = `${delay}s`;
 
-    //         container.appendChild(particle);
-    //     }
-    // }, []);
+            container.appendChild(particle);
+        }
+    }, []);
 
     return (
         <div className="bg-black w-full relative overflow-hidden min-h-screen">
             {/* Particle container */}
             <div
-                // ref={particleContainerRef}
+                ref={particleContainerRef}
                 className="absolute inset-0 pointer-events-none z-0"
             ></div>
 
@@ -64,18 +64,9 @@ export default function Hero() {
                     <Social />
                     <div className="flex flex-col max-w-lg">
                         <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-4">
-                            Full-stack developer and hacker driven by a passion for building
-                            efficient, secure applications. Expertise in web development, with a
-                            focus on performance and security, pushing boundaries in code.
+                            I’m a full-stack developer skilled in web and mobile development, with expertise in front-end, back-end, microservices, CI/CD, Docker, and cloud hosting.
                         </p>
-                        <Button
-                            variant="outline"
-                            size="lg"
-                            className="bg-transparent border-gray-600 text-gray-300 hover:bg-white hover:text-black transition-all duration-300 font-mono text-sm self-start"
-                        >
-                            EXPLORE MY WORK
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
+
                     </div>
                 </div>
 
@@ -113,7 +104,7 @@ export default function Hero() {
             </div>
 
             {/* Particle animation CSS */}
-            {/* <style jsx>{`
+            <style jsx>{`
                 .particle {
                     position: absolute;
                     bottom: 0;
@@ -135,7 +126,7 @@ export default function Hero() {
                         opacity: 0;
                     }
                 }
-            `}</style> */}
+            `}</style>
         </div>
     )
 }
