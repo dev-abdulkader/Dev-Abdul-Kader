@@ -4,23 +4,24 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import { StaticImageData } from "next/image";
-import realestate from "@/public/realestate.png";
-import ecommerce from "@/public/ecommerce.png";
-import mooncosmetics from "@/public/mooncosmetics.png";
 import stationary from "@/public/stationary.png";
 import dinmajur from "@/public/project/dinmajur.png";
 import ProjectCard from "./project-card";
-// Project data
-// Project data
+import hypetownbd from "@/public/project/hypetownbd.png";
 
 const projects = [
     {
         id: 1,
-
         image: dinmajur,
         bgColor: "#1d4c57",
         liveLink: "https://dinmajur.com",
     },
+    {
+        id: 2,
+        image: hypetownbd,
+        bgColor: "#1d4c57",
+        liveLink: "https://hypetownbd.com",
+    }
 
 ];
 

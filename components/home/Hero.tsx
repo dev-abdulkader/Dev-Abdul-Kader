@@ -1,7 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+
 import Social from "./social"
 import VerticalBarsNoise from "./vertical-bars"
 import { useEffect, useRef } from "react"
