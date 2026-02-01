@@ -1,83 +1,8 @@
-// 'use client'
-
-// type ExperienceItem = {
-//   company: string
-//   year: string
-//   position: string
-//   description: string
-// }
-
-// const experiences: ExperienceItem[] = [
-//   {
-//     company: "LabFry Technology",
-//     year: "Apr 2025 - Present",
-//     position: "Full Stack Developer",
-//     description:
-//       "Developed full-stack web applications, building scalable solutions with modern technologies and frameworks.",
-//   },
-//   {
-//     company: "SM Technology",
-//     year: "Dec 2024 - Mar 2025",
-//     position: "Backend Developer",
-//     description:
-//       "Designed backend systems, focusing on API development, database optimization, and high-performance applications.",
-//   },
-//   {
-//     company: "ZORG IT GROUP",
-//     year: "Jul 2024 - Dec 2024",
-//     position: "Frontend Developer",
-//     description:
-//       "Built responsive and user-friendly interfaces ensuring seamless user experience across devices.",
-//   },
-// ]
-
-// export default function Experience() {
-//   return (
-//     <section className="py-24 bg-background">
-//       <div className="max-w-6xl mx-auto px-4">
-//         {/* Section Header */}
-//         <div className="text-center mb-16">
-//           <h2 className="text-4xl font-bold text-foreground mb-4">
-//             My Experience
-//           </h2>
-//           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-//             Here are some of the companies I’ve worked with and the projects I’ve contributed to.
-//           </p>
-//         </div>
-
-//         {/* Experience Cards */}
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-//           {experiences.map((item, index) => (
-//             <div
-//               key={index}
-//               className="bg-card rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
-//             >
-//               <div className="mb-2">
-//                 <h3 className="text-xl font-semibold text-foreground">
-//                   {item.company}
-//                 </h3>
-//                 <span className="text-sm text-muted-foreground">
-//                   {item.year}
-//                 </span>
-//               </div>
-//               <div className="mb-4">
-//                 <span className="text-sm font-medium uppercase text-accent">
-//                   {item.position}
-//                 </span>
-//               </div>
-//               <p className="text-sm text-muted-foreground">{item.description}</p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
 
 
 'use client'
 
-const experiences= [
+const experiences = [
   {
     id: 1,
     role: "Full Stack Developer",
@@ -113,7 +38,7 @@ const experiences= [
 export default function Experiences() {
   return (
     <section className="py-20  bg-background">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl px-5 mx-auto">
         {/* Section Header */}
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -141,7 +66,7 @@ export default function Experiences() {
               </div>
 
               {/* Experience Card */}
-              <div className="ml-24 pb-8 border-l-2 border-border pl-6 hover:border-accent/50 transition-colors">
+              <div className="ml-24 pb-8 border-l-2 border-border pl-6 hover:border-[#808] transition-colors">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
                   <div>
                     <h3 className="text-2xl font-bold text-foreground">

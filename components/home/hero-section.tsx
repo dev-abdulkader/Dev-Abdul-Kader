@@ -6,7 +6,7 @@ import Social from './social';
 
 export default function HeroSection() {
     return (
-        <div className="relative min-h-screen bg-background text-foreground overflow-hidden">
+        <div className="relative min-h-screen flex flex-col items-center justify-center bg-background text-foreground overflow-hidden">
             {/* Navigation */}
 
 
@@ -53,26 +53,46 @@ export default function HeroSection() {
 
                     {/* Heading with Code Styling */}
                     <div className="text-center mb-8">
-                        <h1 className="text-5xl md:text-6xl font-bold mb-4">
+                        <h1 className="text-5xl  md:text-6xl font-bold mb-4">
                             Hi, I'm{' '}
                             <span className="text-accent">
                                 {'<'}Md Abdul Kader{'>'}
                             </span>
                         </h1>
-                    
+
                     </div>
 
                     {/* Description */}
                     <p className="text-center text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
                         I’m a software developer building web and mobile platforms that create real-world impact.
                         I’ve built platforms like
-                        <span className="inline-block bg-green-100 text-green-800 font-semibold text-sm px-2 py-1 rounded-full mx-1">
+
+                        <span className="inline-flex items-center gap-1 bg-violet-100 text-[#808] font-semibold text-sm px-2 py-1 rounded-full mx-1">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 480 480"
+                                className="w-3 h-3"
+                                fill="#808"
+                            >
+                                <path d="M450 210A180 180 0 0 1 270 30a30 30 0 1 0-60 0A180 180 0 0 1 30 210a30 30 0 1 0 0 60 180 180 0 0 1 180 180 30 30 0 1 0 60 0 180 180 0 0 1 180-180 30 30 0 1 0 0-60Z" />
+                            </svg>
                             dinmajur.com
                         </span>
+
                         and
-                        <span className="inline-block bg-green-100 text-green-800 font-semibold text-sm px-2 py-1 rounded-full mx-1">
+
+                        <span className="inline-flex items-center gap-1 bg-violet-100 text-[#808] font-semibold text-sm px-2 py-1 rounded-full mx-1">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 480 480"
+                                className="w-3 h-3"
+                                fill="#808"
+                            >
+                                <path d="M450 210A180 180 0 0 1 270 30a30 30 0 1 0-60 0A180 180 0 0 1 30 210a30 30 0 1 0 0 60 180 180 0 0 1 180 180 30 30 0 1 0 60 0 180 180 0 0 1 180-180 30 30 0 1 0 0-60Z" />
+                            </svg>
                             radhbo.com
                         </span>
+
                         supporting employment and income opportunities.
                     </p>
 
@@ -90,7 +110,7 @@ export default function HeroSection() {
 
                     <div>
                         <div className="mb-3">
-                            <span className="text-green-500 text-sm font-mono">{"<Success & Achievements>"}</span>
+                            <span className="text-accent text-sm">{"<Success & Achievements>"}</span>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                             <div className="text-center md:text-left">

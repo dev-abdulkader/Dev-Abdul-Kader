@@ -1,171 +1,117 @@
-"use client";
-import React, { useState } from "react";
-import {
-    FaFacebookF,
-    FaLinkedinIn,
-    FaGithub,
-} from "react-icons/fa";
-import FormTextarea from "../forms/FormTextarea";
-import Form from "../forms/Form";
-import FormInput from "../forms/FormInput";
-import emailjs from "@emailjs/browser";
-import MotionTransitionLeft from "../motion/MotionTransitionLeft";
-import MotionTransitionRight from "../motion/MotionTransitionRight";
 
-const Contact: React.FC = () => {
-    const [response, setResponse] = useState("Send Message");
 
-    const submitHandler = async (data: any) => {
-        setResponse("Sending...");
-        await emailjs
-            .send(
+'use client'
+
+import React, { useState } from "react"
+import { Mail, Github, Linkedin, Twitter } from 'lucide-react'
+import emailjs from "@emailjs/browser"
+
+export default function Contact() {
+    const [formData, setFormData] = useState({ email: '', message: '' })
+    const [response, setResponse] = useState("Send Message")
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target
+        setFormData(prev => ({ ...prev, [name]: value }))
+    }
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault()
+        setResponse("Sending...")
+
+        try {
+            await emailjs.send(
                 process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
                 process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
-                data,
+                {
+                    email: formData.email,
+                    message: formData.message,
+                },
                 process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
             )
-            .then(
-                () => {
-                    setResponse("Message Sent");
-                    setTimeout(() => setResponse("Send Message"), 2000);
-                },
-                () => {
-                    setResponse("Sending Failed");
-                    setTimeout(() => setResponse("Send Message"), 2000);
-                }
-            );
-    };
+
+            setResponse("Message Sent ✓")
+            setFormData({ email: '', message: '' })
+
+            setTimeout(() => setResponse("Send Message"), 3000)
+
+        } catch (error) {
+            console.error("EmailJS Error:", error)
+            setResponse("Sending Failed ❌")
+            setTimeout(() => setResponse("Send Message"), 3000)
+        }
+    }
 
     return (
-        <div className="bg-black overflow-hidden" id="contact">
+        <footer className="w-full border-t border-border">
+            <div className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
-            <div className="flex md:flex-row max-w-7xl mx-auto px-5 flex-col justify-center items-center py-20 gap-10">
-                {/* Left side: Info */}
-                <div className="md:w-1/2 w-full">
-                    <MotionTransitionLeft>
-                        <ContactInfo />
-                    </MotionTransitionLeft>
-                </div>
+                    {/* Left Section */}
+                    <div className="space-y-6">
+                        <h2 className="text-4xl md:text-5xl font-bold">
+                            Is there a fascinating <span className="italic text-accent">project</span> brewing in your mind?
+                        </h2>
 
-                {/* Right side: Form */}
-                <main className="md:w-1/2 xl:w-[40vw] 2xl:w-[30vw] w-full p-0">
-                    <MotionTransitionRight>
-                        <div className="bg-white px-8 md:px-10 py-10 rounded-lg relative w-full h-auto shadow-md">
-                            <div className="mb-6">
-                                <h2 className="text-4xl md:text-5xl mb-4 font-bonny-medium">
-                                    Get in Touch
-                                </h2>
+                        <p className="text-muted-foreground">
+                            Have a project, idea, or collaboration in mind? Let's build something impactful.
+                        </p>
 
+                        <div className="flex gap-4">
+                            <Twitter />
+                            <Linkedin />
+                            <Github />
+                            <Mail />
+                        </div>
+                    </div>
+
+                    {/* Contact Form */}
+                    <div className=" border border-border rounded-2xl bg-white p-8">
+                        <form onSubmit={handleSubmit} className="space-y-4">
+
+                            <div>
+                                <label>Email</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                    placeholder="your@email.com"
+                                    className="w-full px-4 py-2 outline-none border rounded-lg"
+                                />
                             </div>
 
-                            <Form submitHandler={submitHandler}>
-                                <FormInput
-                                    name="fullName"
-                                    label="Full Name"
-                                    placeholder="Enter your full name"
-                                    required
-                                    className="w-full px-4 py-2 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
-                                />
-
-                                <FormInput
-                                    name="phoneNumber"
-                                    label="Phone Number"
-                                    placeholder="Enter your phone number"
-                                    required
-                                    className="w-full px-4 py-2 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
-                                />
-
-                                <FormInput
-                                    name="email"
-                                    type="email"
-                                    label="Email"
-                                    placeholder="Enter your email"
-                                    required
-                                    className="w-full px-4 py-2 mb-3 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
-                                />
-
-                                <FormTextarea
+                            <div>
+                                <label>Message</label>
+                                <textarea
                                     name="message"
-                                    label="Your Message"
-                                    placeholder="Enter your message"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 mb-4 bg-white text-black border border-gray-300 rounded-lg focus:outline-none focus:border-black placeholder-gray-500"
+                                    rows={4}
+                                    placeholder="Tell me about your project..."
+                                    className="w-full px-4 outline-none py-2 border rounded-lg"
                                 />
+                            </div>
 
-                                <div className="flex justify-end">
-                                    <button
-                                        type="submit"
-                                        className={`${response === "Sending..."
-                                            ? "bg-gray-500"
-                                            : response === "Message Sent"
-                                                ? "bg-green-600"
-                                                : response === "Sending Failed"
-                                                    ? "bg-red-500"
-                                                    : "bg-slate-800"
-                                            } text-white w-[150px] py-2 rounded-lg active:scale-[0.96] transition-all`}
-                                    >
-                                        {response}
-                                    </button>
-                                </div>
-                            </Form>
-                        </div>
-                    </MotionTransitionRight>
-                </main>
-            </div>
-        </div>
-    );
-};
+                            <button
+                                type="submit"
+                                className={`w-full py-2.5 rounded-lg text-white transition-all
+                                    ${response === "Sending..." ? "bg-gray-500" :
+                                        response.includes("Sent") ? "bg-green-600" :
+                                            response.includes("Failed") ? "bg-red-500" :
+                                                "bg-[#808]"}
+                                `}
+                            >
+                                {response}
+                            </button>
 
-const ContactInfo: React.FC = () => {
-    return (
-        <div className="text-white text-sm font-geist">
-
-
-            <div className="grid grid-cols-2 gap-6">
-                <div>
-                    <h3 className="mb-1 font-semibold">Contact Number</h3>
-                    <p>+8801788838782</p>
-                </div>
-
-                <div>
-                    <h3 className="mb-1 font-semibold">My Location</h3>
-                    <p>Dhaka, Bangladesh</p>
-                </div>
-
-                <div>
-                    <h3 className="mb-1 font-semibold">Email</h3>
-                    <p>abdulemail789@gmail.com</p>
-                </div>
-
-                <div>
-                    <h3 className="mb-1 font-semibold">Social Network</h3>
-                    <div className="flex space-x-4 text-xl">
-                        <a
-                            href="https://www.facebook.com/abd.joni.9"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaFacebookF />
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/md-abdul-kader-852871202/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaLinkedinIn />
-                        </a>
-                        <a
-                            href="https://github.com/abdulkader789"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FaGithub />
-                        </a>
+                        </form>
                     </div>
+
                 </div>
             </div>
-        </div>
-    );
-};
-
-export default Contact;
+        </footer>
+    )
+}

@@ -1,81 +1,88 @@
-"use client";
+'use client';
 
-import { ReactLenis } from "lenis/react";
-import { useScroll, useTransform, motion, useInView, useAnimation } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useState } from 'react';
 
-const videoData = [
-    { src: "https://www.youtube.com/embed/cNWzmlCz6Dk" },
-    { src: "https://www.youtube.com/embed/gwVcyRa5iSc" },
-    { src: "https://www.youtube.com/embed/iMEmW4ts9mY" },
+const videoLinks = [
+    {
+        url: "https://www.youtube.com/watch?v=iMEmW4ts9mY",
+        title: "Internalization in Next.js",
+    },
+    {
+        url: "https://www.youtube.com/watch?v=cNWzmlCz6Dk",
+        title: "Filter Method in JavaScript",
+    },
+    {
+        url: "https://www.youtube.com/watch?v=gwVcyRa5iSc",
+        title: "let vs const in JavaScript",
+    },
+
 ];
 
-export default function VideoSection() {
-    return (
-        <div className="min-h-screen relative ">
-            <ReactLenis root>
-                <main className="relative">
+// Helper function to extract video ID from YouTube URL
+const getVideoId = (url: string) => {
+    return url.split("v=")[1]?.split("&")[0];
+};
 
-
-
-                    {/* Video Cards */}
-                    <section className="w-full relative z-20 ">
-                        {videoData.map((video, i) => (
-                            <VideoCard key={i} video={video} />
-                        ))}
-
-                    </section>
-                </main>
-            </ReactLenis>
-        </div>
-    );
-}
-
-// ================= Background Animation =================
-// ================= Background Animation triggered by "MY VIDEOS" =================
-// ================= Background Animation triggered by "MY VIDEOS" =================
-
-
-
-
-
-
-
-// ================= Video Card =================
-interface VideoCardProps {
-    video: { src: string };
-}
-
-const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
-    const container = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: container,
-        offset: ["start end", "end start"],
+export function VideoSection() {
+    const videos = videoLinks.map((video) => {
+        const id = getVideoId(video.url);
+        return {
+            id,
+            title: video.title,
+            embedUrl: `https://www.youtube.com/embed/${id}`,
+            thumbnail: `https://img.youtube.com/vi/${id}/hqdefault.jpg`,
+        };
     });
 
-    const translateY = useTransform(scrollYProgress, [0, 1], [50, 0]);
+    const [selectedVideo, setSelectedVideo] = useState(videos[0]);
 
     return (
-        <div
-            ref={container}
-            className="md:h-screen bg-red-100 flex justify-center items-center sticky top-0"
-        >
-            <motion.div
-                style={{ backgroundColor: "#000", y: translateY }}
-                className="flex flex-col items-center justify-center w-[90vw] md:h-[500px] md:w-[70%] rounded-xl p-6 shadow-xl"
-            >
-                <div className="w-full h-full flex justify-center items-center">
-                    <iframe
-                        width="100%"
-                        height="100%"
-                        src={video.src}
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="rounded-lg"
-                    ></iframe>
+        <section className="w-full bg-background py-16 px-4">
+            <div className="max-w-6xl mx-auto">
+                {/* Header */}
+                <div className="mb-12 md:mb-16 flex flex-col items-center justify-center text-center">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance mb-4">
+                        My YouTube Videos
+                    </h2>
+                    <p className="text-lg text-muted-foreground max-w-2xl">
+                        Explore my collection of in-depth tutorials, guides, and technical content covering modern web development and advanced programming techniques.
+                    </p>
                 </div>
-            </motion.div>
-        </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                    {/* Video Player */}
+                    <div className="lg:col-span-2">
+                        <iframe
+                            src={selectedVideo.embedUrl}
+                            className="w-full aspect-video rounded-lg border"
+                            allowFullScreen
+                        />
+                    </div>
+
+                    {/* Playlist */}
+                    <div className="space-y-3">
+                        {videos.map(video => (
+                            <button
+                                key={video.id}
+                                onClick={() => setSelectedVideo(video)}
+                                className={`flex gap-3 p-2 border rounded-lg w-full text-left transition-all ${selectedVideo.id === video.id
+                                    ? "border-accent bg-accent/10"
+                                    : "border-gray-300"
+                                    }`}
+                            >
+                                <img
+                                    src={video.thumbnail}
+                                    alt={video.title}
+                                    className="w-24 rounded"
+                                />
+                                <span className="font-medium">{video.title}</span>
+                            </button>
+                        ))}
+                    </div>
+
+                </div>
+            </div>
+        </section>
     );
-};
+}

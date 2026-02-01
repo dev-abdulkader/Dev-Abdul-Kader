@@ -1,51 +1,18 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ExternalLink } from 'lucide-react'
+import { getAllProjects } from '@/lib/projects';
+import { Button } from '../ui/button';
 
-const projects = [
-  {
-    id: 1,
-    title: 'E-Commerce Platform',
-    description:
-      'Built a full-stack e-commerce platform with real-time inventory management, payment processing, and advanced search functionality. Features include user authentication, product recommendations, and admin dashboard.',
-    image: 'https://images.unsplash.com/photo-1460925895917-adf4e565016d?w=600&h=400&fit=crop',
-    link: '#',
-    tags: ['React', 'Node.js', 'PostgreSQL'],
-  },
-  {
-    id: 2,
-    title: 'Task Management SaaS',
-    description:
-      'Developed a collaborative task management platform with real-time updates, team workspace organization, and analytics dashboard. Integrated with popular calendar and communication tools for seamless workflow.',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop',
-    link: '#',
-    tags: ['Next.js', 'TypeScript', 'Supabase'],
-  },
-  {
-    id: 3,
-    title: 'AI Content Generator',
-    description:
-      'Created an AI-powered content generation tool leveraging large language models for automated writing assistance. Includes content templates, batch processing, and SEO optimization features.',
-    image: 'https://images.unsplash.com/photo-1677442d019cecf8d424f9fb2c5518da9f10c63b?w=600&h=400&fit=crop',
-    link: '#',
-    tags: ['Next.js', 'AI SDK', 'Vercel'],
-  },
-  {
-    id: 4,
-    title: 'Analytics Dashboard',
-    description:
-      'Built a comprehensive analytics dashboard with interactive charts, custom reporting, and data visualization. Real-time metrics tracking with WebSocket integration for live data updates.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-    link: '#',
-    tags: ['React', 'D3.js', 'Express'],
-  },
-]
+
 
 export default function Projects() {
+  const projects = getAllProjects();
+
   return (
-    <section className="py-20 px-4  bg-background">
-      <div className="max-w-6xl mx-auto px-4 md:px-8">
+    <section className="py-20 bg-background">
+      <div className="max-w-6xl mx-auto px-5">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 text-balance">
@@ -79,7 +46,7 @@ export default function Projects() {
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map((tag) => (
+                  {project.techStack.map((tag) => (
                     <span
                       key={tag}
                       className="px-3 py-1 rounded-full text-xs font-medium bg-card text-muted-foreground border border-border"
@@ -90,13 +57,34 @@ export default function Projects() {
                 </div>
 
                 {/* View Project Link */}
-                <Link
-                  href={project.link}
-                  className="inline-flex items-center gap-2 text-accent hover:text-accent font-semibold transition-colors group/link"
-                >
-                  View Project
-                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                </Link>
+                <div className='flex items-center justify-between'>
+
+
+                  <Link
+                    href={`/projects/${project.id}`}
+
+                  >
+                    <Button className='bg-accent'>
+                      View Details
+                    </Button>
+                  </Link>
+
+
+                  <a
+                    target="_blank"
+                    href={project.links.disabled ? undefined : project.links.live}
+                    onClick={(e) => project.links.disabled && e.preventDefault()} // Prevent navigation if disabled
+                  >
+                    <Button
+                      variant="ghost"
+                      className="gap-2"
+                      disabled={project.links.disabled} // Disable the button visually & functionally
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      {project.links.disabled ? "Private" : "View Live"}
+                    </Button>
+                  </a>
+                </div>
               </div>
             </div>
           ))}
