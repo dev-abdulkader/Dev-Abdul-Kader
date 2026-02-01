@@ -6,6 +6,8 @@ import Social from './social';
 
 export default function HeroSection() {
     return (
+
+
         <div className="relative min-h-screen flex flex-col items-center justify-center bg-background text-foreground overflow-hidden">
             {/* Navigation */}
 

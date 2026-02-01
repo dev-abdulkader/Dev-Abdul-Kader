@@ -14,10 +14,10 @@ export function ProjectHeader({ project }: ProjectHeaderProps) {
     return (
         <div className="w-full border-b border-border bg-card">
             <div className="mx-auto max-w-6xl px-5 pb-8 pt-28 ">
-                <Link href="/projects">
+                <Link href="/work">
                     <Button variant="ghost" className="mb-6 gap-2">
                         <ArrowLeft className="h-4 w-4" />
-                        Back to Projects
+                        Back to Work
                     </Button>
                 </Link>
 

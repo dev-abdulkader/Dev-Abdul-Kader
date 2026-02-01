@@ -4,7 +4,7 @@
 
 import React, { useState } from "react"
 import { Mail, Github, Linkedin, Twitter } from 'lucide-react'
-// import emailjs from "@emailjs/browser"
+import emailjs from "@emailjs/browser"
 
 export default function Contact() {
     const [formData, setFormData] = useState({ email: '', message: '' })
@@ -15,32 +15,27 @@ export default function Contact() {
         setFormData(prev => ({ ...prev, [name]: value }))
     }
 
-    // const handleSubmit = async (e: React.FormEvent) => {
-    //     e.preventDefault()
-    //     setResponse("Sending...")
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setResponse('Sending...');
 
-    //     try {
-    //         await emailjs.send(
-    //             process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
-    //             process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
-    //             {
-    //                 email: formData.email,
-    //                 message: formData.message,
-    //             },
-    //             process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
-    //         )
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
 
-    //         setResponse("Message Sent ✓")
-    //         setFormData({ email: '', message: '' })
+            if (!res.ok) throw new Error('Failed');
 
-    //         setTimeout(() => setResponse("Send Message"), 3000)
-
-    //     } catch (error) {
-    //         console.error("EmailJS Error:", error)
-    //         setResponse("Sending Failed ❌")
-    //         setTimeout(() => setResponse("Send Message"), 3000)
-    //     }
-    // }
+            setResponse('Message Sent ✓');
+            setFormData({ email: '', message: '' });
+            setTimeout(() => setResponse('Send Message'), 3000);
+        } catch {
+            setResponse('Sending Failed ❌');
+            setTimeout(() => setResponse('Send Message'), 3000);
+        }
+    };
 
     return (
         <footer className="w-full border-t border-border">
@@ -67,7 +62,7 @@ export default function Contact() {
 
                     {/* Contact Form */}
                     <div className=" border border-border rounded-2xl bg-white p-8">
-                        <form onSubmit={() => { }} className="space-y-4">
+                        <form onSubmit={handleSubmit} className="space-y-4">
 
                             <div>
                                 <label>Email</label>

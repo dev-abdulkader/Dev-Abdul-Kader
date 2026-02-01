@@ -28,12 +28,14 @@ export default function SocialProofMarquee() {
                 {/* Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
-                        I’ve built platforms for
-                        <span className="text-accent"> businesses and services</span> that create jobs and simplify lives.
+                        <span className="text-accent">Platforms</span> I’ve Built
                     </h2>
-                    <p className="text-lg text-muted-foreground mb-8 text-balance">
-                        From services and delivery platforms to e-commerce, HRMS, repair, and tailor management systems.
+                    <p className="text-lg max-w-4xl mx-auto text-muted-foreground mb-8 text-balance">
+                        Over the years, I’ve worked with delivery platforms, e-commerce companies, digital agencies, and software teams to build scalable products.
                     </p>
+
+
+
                 </div>
 
                 {/* Marquee */}
@@ -43,7 +45,7 @@ export default function SocialProofMarquee() {
                             <img
                                 src={project.logo}
                                 alt={project.name}
-                                className="h-40 w-auto object-contain"
+                                className="h-40 w-full object-cover"
                             />
                         </a>
                     ))}

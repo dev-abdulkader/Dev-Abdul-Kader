@@ -30,7 +30,7 @@ export const projects: ProjectDetails[] = [
     overview:
       "Dinmajur is a scalable service and delivery platform offering home services like housekeeping, beauty salon, event cooking, and grocery delivery. I built the platform using a modern full-stack architecture with real-time notifications and automated deployment pipelines.",
 
-    image: "/projects/dinmajur-mock.png",
+    image: "/work/dinmajur-mock.png",
     category: "Full Stack Web Platform",
     year: 2024,
     role: "Full Stack Developer & Project Manager",
@@ -86,7 +86,7 @@ export const projects: ProjectDetails[] = [
       "Interactive analytics dashboard with real-time data visualization.",
     overview:
       "Developed a real-time analytics platform with charts and WebSocket live updates.",
-    image: "/projects/dinmajur-admin-mock.png",
+    image: "/work/dinmajur-admin-mock.png",
     category: "Dashboard",
     year: 2024,
     role: "Frontend Developer",
@@ -114,7 +114,7 @@ export const projects: ProjectDetails[] = [
     description: "Business platform with analytics and reporting tools.",
     overview:
       "Built a modern analytics system for business insights and reporting.",
-    image: "/projects/radhbo-mock.png",
+    image: "/work/radhbo-mock.png",
     category: "Web App",
     year: 2024,
     role: "Full Stack Developer",
@@ -135,7 +135,7 @@ export const projects: ProjectDetails[] = [
     description: "Interactive analytics dashboard and management platform.",
     overview:
       "Created a scalable dashboard for real-time monitoring and reporting.",
-    image: "/projects/hypetown-mock.png",
+    image: "/work/hypetown-mock.png",
     category: "SaaS",
     year: 2024,
     role: "Frontend Engineer",
@@ -155,7 +155,7 @@ export const projects: ProjectDetails[] = [
     title: "Digital Marketing Agency",
     description: "AI-powered content generation platform.",
     overview: "Built an AI writing tool with templates and SEO optimization.",
-    image: "/projects/deshi-design-mock.png",
+    image: "/work/deshi-design-mock.png",
     category: "AI SaaS",
     year: 2024,
     role: "Full Stack Developer",
@@ -175,7 +175,7 @@ export const projects: ProjectDetails[] = [
     title: "International Clothing Manufacturer",
     description: "Collaborative task management platform.",
     overview: "Built a real-time team task management system with analytics.",
-    image: "/projects/loomwave-mock.png",
+    image: "/work/loomwave-mock.png",
     category: "SaaS",
     year: 2024,
     role: "Full Stack Developer",

@@ -61,7 +61,7 @@ export default function Projects() {
 
 
                   <Link
-                    href={`/projects/${project.id}`}
+                    href={`/work/${project.id}`}
 
                   >
                     <Button className='bg-accent'>

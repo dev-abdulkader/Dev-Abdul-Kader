@@ -1,16 +1,19 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
-import { Home, Briefcase, Folder, BookOpen, Mail } from "lucide-react";
+import { SlBriefcase } from "react-icons/sl";
+import { BsFolder } from "react-icons/bs";
+import { IoNewspaperOutline } from "react-icons/io5";
+import { FiHome } from "react-icons/fi";
+import { CiMail } from "react-icons/ci";
 
 const Navbar = () => {
     const navItems = [
-        { name: "Home", href: "/home", icon: Home },
-        { name: "Experience", href: "/experience", icon: Briefcase },
-        { name: "Work", href: "/work", icon: Folder },
-        { name: "Blog", href: "/blog", icon: BookOpen },
-        { name: "Contact", href: "/contact", icon: Mail },
+        { name: "Home", href: "/home", icon: FiHome },
+        { name: "Experience", href: "/experience", icon: SlBriefcase },
+        { name: "Work", href: "/work", icon: BsFolder },
+        { name: "Blog", href: "/blog", icon: IoNewspaperOutline },
+        { name: "Contact", href: "/contact", icon: CiMail },
     ];
 
     return (
@@ -31,9 +34,9 @@ const Navbar = () => {
                                 <Link
                                     key={item.name}
                                     href={item.href}
-                                    className="flex items-center gap-2 text-lg capitalize font-medium text-gray-800 hover:text-black transition"
+                                    className="flex items-center gap-2 text-md capitalize hover:text-accent text-gray-800 hover:text-black transition"
                                 >
-                                    <Icon size={18} />
+                                    <Icon size={16} />
                                     {item.name}
                                 </Link>
                             );
