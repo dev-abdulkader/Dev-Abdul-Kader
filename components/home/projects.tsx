@@ -16,7 +16,7 @@ export default function Projects() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 text-balance">
-            Projects I'm Proud of
+            <span className='text-accent'>Projects</span> I'm Proud of
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
             I've worked on numerous projects spanning web development, AI integration, and SaaS

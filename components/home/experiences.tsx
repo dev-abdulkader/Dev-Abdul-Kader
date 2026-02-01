@@ -40,13 +40,13 @@ export default function Experiences() {
     <section className="py-20  bg-background">
       <div className="max-w-6xl px-5 mx-auto">
         {/* Section Header */}
-        <div className="mb-16">
+        <div className="mb-16 flex justify-center items-center flex-col">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Experience
+            <span className="text-accent">Experience</span> That Shaped Me
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl">
+          <p className="text-lg text-muted-foreground text-center max-w-2xl">
             A journey of building, learning, and creating impactful digital
-            solutions. Here's my professional experience in web development.
+            solutions. Here's my professional experience in web and mobile development.
           </p>
         </div>
 

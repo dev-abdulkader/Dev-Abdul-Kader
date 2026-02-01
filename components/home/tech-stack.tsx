@@ -41,7 +41,7 @@ export default function TechStack() {
                 {/* Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 text-balance">
-                        Technologies I Work With
+                        Technologies <span className="text-accent">I Use</span>
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
                         Here are some of the technologies and tools I frequently use to build robust and scalable applications.

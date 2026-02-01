@@ -90,7 +90,7 @@ export default function Contact() {
                                     onChange={handleChange}
                                     required
                                     rows={4}
-                                    placeholder="Tell me about your project..."
+                                    placeholder="Your Message..."
                                     className="w-full px-4 outline-none py-2 border rounded-lg"
                                 />
                             </div>

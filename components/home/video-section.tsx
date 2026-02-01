@@ -42,7 +42,7 @@ export function VideoSection() {
                 {/* Header */}
                 <div className="mb-12 md:mb-16 flex flex-col items-center justify-center text-center">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance mb-4">
-                        My YouTube Videos
+                        <span className="text-accent">YouTube</span> Tutorials & Content
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl">
                         Explore my collection of in-depth tutorials, guides, and technical content covering modern web development and advanced programming techniques.

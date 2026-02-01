@@ -22,27 +22,57 @@ export interface ProjectDetails {
 
 export const projects: ProjectDetails[] = [
   {
-    id: "dinmajur-ecommerce",
-    title: "Service and Delivery Platform",
+    id: "dinmajur-service-and-delivery-platform",
+    title: "Dinmajur – Service & Delivery Platform",
     description:
-      "Full-stack e-commerce platform with real-time inventory and payments.",
+      "A multi-service and delivery platform connecting users with home services and grocery delivery.",
+
     overview:
-      "Built a scalable e-commerce system with authentication, admin dashboard, product search, and real-time stock updates.",
+      "Dinmajur is a scalable service and delivery platform offering home services like housekeeping, beauty salon, event cooking, and grocery delivery. I built the platform using a modern full-stack architecture with real-time notifications and automated deployment pipelines.",
+
     image: "/projects/dinmajur-mock.png",
-    category: "Web Development",
+    category: "Full Stack Web Platform",
     year: 2024,
-    role: "Full Stack Developer",
-    techStack: ["React", "Node.js", "PostgreSQL"],
-    features: [
-      "User authentication",
-      "Product recommendations",
-      "Admin dashboard",
-      "Advanced search system",
+    role: "Full Stack Developer & Project Manager",
+
+    techStack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Docker",
+      "OneSignal",
     ],
-    challenges: ["Scalability", "Payment security", "Database optimization"],
+
+    features: [
+      "Multi-service booking system (housekeeping, salon, cooking, grocery delivery)",
+      "User authentication and role-based access",
+      "Admin dashboard for service and order management",
+      "Real-time order and delivery tracking",
+      "Service search and filtering system",
+      "Push notifications for orders and status updates",
+      "Scalable REST API architecture",
+    ],
+
+    challenges: [
+      "Handling multiple service workflows in one platform",
+      "Scalability and performance optimization",
+      "Real-time notification delivery",
+      "Deployment automation and server configuration",
+    ],
+
     solution:
-      "Used optimized PostgreSQL queries and secure payment APIs with modular backend architecture.",
-    results: ["Fast load time", "Secure transactions", "Scalable architecture"],
+      "Implemented modular backend architecture, optimized MongoDB queries, integrated OneSignal for push notifications, containerized services with Docker, and automated deployment using GitHub Actions on a VPS.",
+
+    results: [
+      "Fast page load using Next.js SSR",
+      "Scalable backend architecture for future services",
+      "Real-time user engagement via push notifications",
+      "Automated CI/CD pipeline reducing deployment time",
+    ],
+
     links: {
       live: "https://dinmajur.com",
       github: "#",

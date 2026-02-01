@@ -55,7 +55,7 @@ export default function HeroSection() {
                     <div className="text-center mb-8">
                         <h1 className="text-5xl  md:text-6xl font-bold mb-4">
                             Hi, I'm{' '}
-                            <span className="text-accent">
+                            <span className="text-[#808]">
                                 {'<'}Md Abdul Kader{'>'}
                             </span>
                         </h1>
@@ -67,7 +67,7 @@ export default function HeroSection() {
                         I’m a software developer building web and mobile platforms that create real-world impact.
                         I’ve built platforms like
 
-                        <span className="inline-flex items-center gap-1 bg-violet-100 text-[#808] font-semibold text-sm px-2 py-1 rounded-full mx-1">
+                        <span className="inline-flex items-center gap-1 bg-violet-100 text-accent font-semibold text-sm px-2 py-1 rounded-full mx-1">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 480 480"
