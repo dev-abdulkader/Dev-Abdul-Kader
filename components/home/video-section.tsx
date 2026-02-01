@@ -10,7 +10,7 @@ const videoData = [
     { src: "https://www.youtube.com/embed/iMEmW4ts9mY" },
 ];
 
-export default function VideoSection(): JSX.Element {
+export default function VideoSection() {
     return (
         <div className="min-h-screen relative ">
             <ReactLenis root>
