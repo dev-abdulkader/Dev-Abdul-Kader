@@ -1,24 +1,26 @@
 
-import Hero from "@/components/home/Hero";
-import ProjectsSection from "@/components/home/project-section";
-import StickyContainer from "@/components/home/sticky-section";
-import Lenis from "@studio-freight/lenis";
+
+// import Lenis from "@studio-freight/lenis";
 import VideoSection from "@/components/home/video-section";
-import AboutMe from "@/components/home/about-me";
-import Contact from "@/components/home/contact";
-import Footer from "@/components/shared/footer/Footer";
+import HeroSection from "@/components/home/hero-section";
+import SocialProof from "@/components/home/social-proof";
+import TimelineExperience from "@/components/home/timeline-experience";
+import Projects from "@/components/home/projects";
+import Experiences from "@/components/home/experiences";
+import Footer from "@/components/shared/footer";
+import TechStack from "@/components/home/tech-stack";
 
 export default function Home() {
 
   return (
     <main className="">
-      <Hero />
-      <AboutMe />
-      <StickyContainer />
-      <ProjectsSection />
-      <VideoSection />
-      <Contact />
+      <HeroSection />
+      <SocialProof />
+      <Experiences />
+      <Projects />
+      <TechStack />
       <Footer />
+      {/* <Contact /> */}
     </main>
   );
 }
