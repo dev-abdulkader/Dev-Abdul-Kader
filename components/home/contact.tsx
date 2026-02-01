@@ -65,7 +65,7 @@ export default function Contact() {
                         <form onSubmit={handleSubmit} className="space-y-4">
 
                             <div>
-                                <label>Email</label>
+                                <label className="text-muted-foreground">Email</label>
                                 <input
                                     type="email"
                                     name="email"
@@ -73,12 +73,12 @@ export default function Contact() {
                                     onChange={handleChange}
                                     required
                                     placeholder="your@email.com"
-                                    className="w-full px-4 py-2 outline-none border rounded-lg"
+                                    className="w-full text-muted-foreground px-4 py-2 outline-none border rounded-lg"
                                 />
                             </div>
 
                             <div>
-                                <label>Message</label>
+                                <label className="text-muted-foreground">Message</label>
                                 <textarea
                                     name="message"
                                     value={formData.message}
@@ -86,7 +86,7 @@ export default function Contact() {
                                     required
                                     rows={4}
                                     placeholder="Your Message..."
-                                    className="w-full px-4 outline-none py-2 border rounded-lg"
+                                    className="w-full text-muted-foreground px-4 outline-none py-2 border rounded-lg"
                                 />
                             </div>
 

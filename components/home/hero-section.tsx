@@ -116,26 +116,26 @@ export default function HeroSection() {
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                             <div className="text-center md:text-left">
-                                <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">15+</div>
-                                <div className="text-gray-600 text-sm">
+                                <div className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-1">15+</div>
+                                <div className="text-gray-600 dark:text-gray-300 text-sm">
                                     Completed<br />Projects
                                 </div>
                             </div>
                             <div className="text-center md:text-left">
-                                <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">2+</div>
-                                <div className="text-gray-600 text-sm">
+                                <div className="text-3xl dark:text-white md:text-4xl font-bold text-gray-900 mb-1">2+</div>
+                                <div className="text-gray-600 dark:text-gray-300 text-sm">
                                     Years in<br />Development
                                 </div>
                             </div>
                             <div className="text-center md:text-left">
-                                <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">3</div>
-                                <div className="text-gray-600 text-sm">
+                                <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1 dark:text-white">3</div>
+                                <div className="text-gray-600 dark:text-gray-300 text-sm">
                                     Companies<br />Worldwide
                                 </div>
                             </div>
                             <div className="text-center md:text-left">
-                                <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">10,000+</div>
-                                <div className="text-gray-600 text-sm">
+                                <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1 dark:text-white">10,000+</div>
+                                <div className="text-gray-600 dark:text-gray-300 text-sm">
                                     Users on My Built<br />Platforms
                                 </div>
                             </div>

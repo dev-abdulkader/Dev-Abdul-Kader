@@ -36,7 +36,7 @@ const technologies = [
 
 export default function TechStack() {
     return (
-        <section className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-20">
+        <section className="min-h-screen bg-background  py-20">
             <div className="max-w-6xl mx-auto px-5">
                 {/* Header */}
                 <div className="text-center mb-16">
