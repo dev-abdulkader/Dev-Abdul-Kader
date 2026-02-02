@@ -63,6 +63,26 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
+
+            {/* Mobile Bottom Navbar */}
+            <div className="fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-t border-white/20 dark:border-gray-700 backdrop-blur-lg md:hidden">
+                <div className="max-w-6xl mx-auto flex justify-around py-3">
+                    {navItems.map((item) => {
+                        const Icon = item.icon;
+                        return (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className="flex flex-col items-center text-gray-800 dark:text-gray-200 text-sm"
+                            >
+                                <Icon size={20} />
+                                <span>{item.name}</span>
+                            </Link>
+                        );
+                    })}
+                </div>
+            </div>
+
         </>
     );
 };

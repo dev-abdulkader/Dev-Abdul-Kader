@@ -1,4 +1,4 @@
-import Experiences from '@/components/home/experiences';
+import Experiences from '@/components/home/experience';
 import React from 'react';
 
 const page = () => {

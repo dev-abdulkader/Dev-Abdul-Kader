@@ -28,7 +28,7 @@ export default function Projects() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {projects.map((project) => (
-            <div key={project.id} className="group">
+            <div key={project.id} className="group ">
               {/* Project Image */}
               <div className="relative mb-6 overflow-hidden rounded-lg bg-card aspect-video">
                 <img
@@ -39,7 +39,7 @@ export default function Projects() {
               </div>
 
               {/* Project Info */}
-              <div>
+              <div className=''>
                 <h3 className="text-2xl font-bold text-foreground mb-3">{project.title}</h3>
 
                 <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
@@ -57,7 +57,7 @@ export default function Projects() {
                 </div>
 
                 {/* View Project Link */}
-                <div className='flex items-center justify-between'>
+                <div className='flex items-center gap-3 '>
 
 
                   <Link

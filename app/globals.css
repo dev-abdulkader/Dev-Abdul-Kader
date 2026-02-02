@@ -4,6 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+
+  --badge-bg: #f3f3f3;
+  --badge-text: #111111;
   /* Base */
   --background: #ffffff;
   --foreground: #111111;
@@ -40,7 +43,8 @@
 .dark {
   --background: #0f0f0f;
   --foreground: #ffffff;
-
+  --badge-bg: #1a1a1a;
+  --badge-text: #ffffff;
   --card: #151515;
   --card-foreground: #ffffff;
 
@@ -109,6 +113,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
